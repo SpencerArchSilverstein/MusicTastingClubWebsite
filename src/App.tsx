@@ -5,30 +5,38 @@ import OurMission from './mission'
 import SalesPitch from './salespitch';
 import Socials from './socials';
 import ImageScroller from './ImageScroller';
-
+import ThisWeeksPicks from './ThisWeeksPicks';
+import FAQ from './FAQ';
+import ExecBoard from './ExecBoard';
+import StarterPacks from './StarterPacks';
 
 function App() {
   return (
-    <div className="all">
+    
+    <div className="all" style={{ position: "relative" }}>
+
       <header className="header">
         MUSIC TASTING CLUB
       </header>
-      <nav>
-        <div className="navCont">
-          <a></a>
-        </div>
-      </nav>
+      <div className="image-scroller">
+      <ImageScroller></ImageScroller>
+      </div>
+
       <h5 className="header2">NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP</h5>
       <SalesPitch></SalesPitch>
       <OurMission></OurMission>
-      <h3 className="check-out-prev-picks">Check out our previous picks!</h3>
+      <h3 className="check-out-picks">NEXT MEETING'S PICKS (09/XX/24)</h3>
+      <ThisWeeksPicks></ThisWeeksPicks>
+      <h3 className="check-out-picks">PREVIOUS PICKS</h3>
       <BasicTabs></BasicTabs>
-      <Socials></Socials>
-      <div className="imbed-cont">
-      <iframe title="spotify-imbed" className="imbed-spotify" src="https://open.spotify.com/embed/playlist/4M9DE3DCIpJ3xXLEmARFPW?utm_source=generator&theme=0" width="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="apple-music-imbed" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameBorder="0" className="imbed-apple-music" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/ne%C5%8D-wax-bloom/1266657791"></iframe>
-      </div>
-      <ImageScroller></ImageScroller>
+      <h2 className="check-out-picks">FAQ</h2>
+      <FAQ></FAQ>
+      <h2 className="check-out-picks">MEET THE EXEC BOARD!</h2>
+      <ExecBoard></ExecBoard>
+      <h2 className="check-out-picks">GENRE STARTER PACKS</h2>
+      <h5 style={{textAlign:"center"}}>EXPLORE NEW GENRES WITH CLUB PICKS</h5>
+      {/* <StarterPacks></StarterPacks> */}
+      <br></br><br></br>
     </div>
   );
 }

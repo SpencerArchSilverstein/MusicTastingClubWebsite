@@ -14,8 +14,10 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import picksData from './picksData.js';
-
-
+import {useState, useEffect} from 'react';
+import './mission.css';
+import MemberPicksOrNotPicks from './PickChips';
+import { pickOrNotListFall24, colors } from './PickChipsData';
 
 function createData2(
   name: string,
@@ -26,8 +28,6 @@ function createData2(
     picks,
   };
 }
-
-
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -85,9 +85,6 @@ function Row(props: { row: ReturnType<typeof createData2> }) {
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 2 }}>
-              {/* <Typography variant="h6" gutterBottom component="div">
-                History
-              </Typography> */}
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
@@ -128,25 +125,36 @@ function makeRows(dates:Array<string>, quarterIndex:number){
   return rows;
 }
 
-function makeSpringRows(){
-
-}
-
-
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  
+  useEffect(() => {
+    switch (value){
+      case 0:
+        console.log("Tab: WQ24");
+        break;
+      case 1:
+        console.log("Tab: SQ24");
+        break;
+      case 2:
+        console.log("Tab: FQ24");
+        break;
+    }
+  }, [value])
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <div className="cont">
+<Box >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="WQ24 Picks" {...a11yProps(0)} />
-          <Tab label="SQ24 Picks" {...a11yProps(1)} />
-          <Tab label="FQ24 Picks" {...a11yProps(2)} />
+          <Tab label="WQ24 Picks" {...a11yProps(0)} sx={{width:'33%'}}/>
+          <Tab label="SQ24 Picks" {...a11yProps(1)} sx={{width:'33%'}}/>
+          <Tab label="FQ24 Picks" {...a11yProps(2)} sx={{width:'33%'}}/>
+          {/* <Tab label="THIS WEEK'S PICKS" {...a11yProps(3)} /> */}
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -155,12 +163,11 @@ export default function BasicTabs() {
         <TableBody>
           {makeRows(["(1/11/24)","(1/18/24)","(1/25/24)","(2/1/24)","(2/8/24)","(2/15/24)","(2/22/24)","(2/29/24)","(3/7/24)"],0).map((row) => (
             <Row key={row.name} row={row} />
-          ))}
+          ))}         
         </TableBody>
-      </Table>
+      </Table>    
     </TableContainer>
       </CustomTabPanel>
-
       <CustomTabPanel value={value} index={1}>
         <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
@@ -171,12 +178,11 @@ export default function BasicTabs() {
         </TableBody>
       </Table>
     </TableContainer>
-      </CustomTabPanel>
-
-      <CustomTabPanel value={value} index={2}>
-        Item Three
+    <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
       </CustomTabPanel>
     </Box>
+    </div>
+    
   );
 }
 

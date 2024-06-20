@@ -103,5 +103,7 @@ const picksData = [
       { pickId: 68, pickType: "Runner Up Song of the Week", albumName: "Ondulé", artistName: "Mathieu Boogaerts", memberName: "Natalie" },
     ],
   ],
+  [[],],
+  [[],],
 ];
 export default picksData;
