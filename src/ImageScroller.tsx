@@ -20,7 +20,7 @@ const imageName = ():string[] => {
     "./SQ24_aa/SQ24_W5_AotW.png", "./SQ24_aa/SQ24_W5_RUAotW.png", "./SQ24_aa/SQ24_W5_SotW.png", "./SQ24_aa/SQ24_W5_RUSotW.png",
     "./SQ24_aa/SQ24_W6_AotW.png", "./SQ24_aa/SQ24_W6_RUAotW.png", "./SQ24_aa/SQ24_W6_SotW.png", "./SQ24_aa/SQ24_W6_RUSotW.png",
     "./SQ24_aa/SQ24_W7_AotW.png", "./SQ24_aa/SQ24_W7_RUAotW.png", "./SQ24_aa/SQ24_W7_SotW.png", "./SQ24_aa/SQ24_W7_RUSotW.png",
-    "./SQ24_aa/SQ24_W8_AotW.png", "./SQ24_aa/SQ24_W8_RUAotW.png", "./SQ24_aa/SQ24_W8_SotW.png", "./SQ24_aa/SQ24_W8_RUSotW.png",
+    "./SQ24_aa/SQ24_W8_AotW.png", "./SQ24_aa/SQ24_W8_RUAotW.png", "./SQ24_aa/SQ24_W8_SotW.png", "./SQ24_aa/SQ24_W8_RUSotW.png", 
 ];
     return images;
 }
@@ -28,7 +28,7 @@ function ImageScroller(){
 
     const images=imageName();
     const imagesPerRow = 6; 
-    const numLines = 6;
+    const numLines = 7;
 
     const lines = [];
 
@@ -52,7 +52,6 @@ function ImageScroller(){
                     alt={`Image ${imgIndex + 1}`}
                   />
                 ))}
-
                 </div>
             ))}
         </div>

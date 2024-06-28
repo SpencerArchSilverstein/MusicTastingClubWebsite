@@ -1,4 +1,33 @@
-
+.company-logos{
+    width:90px;
+    height:90px;
+    margin:10px;
+  }
+  
+  .outer-logo-cont{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    margin-top:10px;
+  }
+  
+  
+  .inner-logo-cont{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+  }
+  .inner-logo-cont p{
+    margin-top:-10px;
+    text-align:center;
+    font-size:15px;
+  }
+  .extra-padding{
+    margin-left:10px;
+  }
 
 
 /* 

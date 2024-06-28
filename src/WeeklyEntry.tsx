@@ -17,7 +17,27 @@ import picksData from './picksData.js';
 import {useState, useEffect} from 'react';
 import './mission.css';
 import MemberPicksOrNotPicks from './PickChips';
-import { pickOrNotListFall24, colors } from './PickChipsData';
+import {pickOrNotListFall24} from './PickChipsData';
+import ThisWeeksPicks from './ThisWeeksPicks';
+import PrizeWheel from './NameWheel';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+
+const colors: string[] = [
+  'rgba(255, 99, 132, 0.5)',
+  'rgba(54, 162, 235, 0.5)',
+  'rgba(255, 206, 86, 0.5)',
+  'rgba(75, 192, 192, 0.5)',
+  'rgba(153, 102, 255, 0.5)',
+  'rgba(255, 159, 64, 0.5)',
+  'rgba(199, 199, 199, 0.5)',
+  'rgba(83, 102, 255, 0.5)',
+  'rgba(104, 159, 56, 0.5)'
+];
 
 function createData2(
   name: string,
@@ -125,7 +145,7 @@ function makeRows(dates:Array<string>, quarterIndex:number){
   return rows;
 }
 
-export default function BasicTabs() {
+export default function WeeklyEntry() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -144,10 +164,45 @@ export default function BasicTabs() {
         console.log("Tab: FQ24");
         break;
     }
-  }, [value])
+  }, [value]);
+  const [aotw, setAotw] = useState<string[]>([ 'AotW1', 'AotW2','AotW3','AotW4','AotW5','AotW6'] );
+  const [ruaotw, setRuatw] = useState<string[]>(['RUAotW1', 'RUAotW2','RUAotW3','RUAotW4','RUAotW5','RUAotW6']);
+  const [sotw, setSotw] = useState<string[]>(['SotW1', 'SotW2','SAotW3','SotW4','SotW5','SotW6']);
+  const [rusotw, setRuaotw] = useState<string[]>(['RUSotW1', 'RUSotW2','RUSAotW3','RUSotW4','RUSAotW5','RUSotW6']);
+
+  const [pick, setPick] = useState('Album of the Week');
+  const [wheelOptions, setWheelOptions] = useState<string[]>([]);
+
+  const handleChange2 = (event: SelectChangeEvent) => {
+    const selectedPick = event.target.value as string;
+    setPick(selectedPick);
+  };
+
+  useEffect(() => {
+    switch (pick) {
+      case "Album of the Week":
+        setWheelOptions(['AotW1', 'AotW2', 'AotW3', 'AotW4', 'AotW5', 'AotW6']);
+        break;
+      case "Runner Up Album of the Week":
+        setWheelOptions(['RUAotW1', 'RUAotW2', 'RUAotW3', 'RUAotW4', 'RUAotW5', 'RUAotW6']);
+        break;
+      case "Song of the Week":
+        setWheelOptions(['SotW1', 'SotW2', 'SotW3', 'SotW4', 'SotW5', 'SotW6']);
+        break;
+      case "Runner Up Song of the Week":
+        setWheelOptions(['RUSotW1', 'RUSotW2', 'RUSotW3', 'RUSotW4', 'RUSotW5', 'RUSotW6']);
+        break;
+      default:
+        setWheelOptions(['AotW1', 'AotW2', 'AotW3', 'AotW4', 'AotW5', 'AotW6']);
+    }
+  }, [pick]);
+
+
 
   return (
+    <React.Fragment>
     <div className="cont">
+      <h3 style={{fontSize:35, textAlign:"center", marginBottom:15}}>PREVIOUS PICKS</h3>
 <Box >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -182,6 +237,41 @@ export default function BasicTabs() {
       </CustomTabPanel>
     </Box>
     </div>
+    <div style={{marginTop:40}}>
+    <ThisWeeksPicks></ThisWeeksPicks> 
+    </div>
+     
+     <div style={{ margin: 0, padding: 0 }}>
+
+
+    <div style={{marginTop:60}}>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
+     
+        <div style={{paddingBottom:20, marginBottom:-70, minWidth:400}}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Pick</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={pick}
+            label="Pick"
+            onChange={handleChange2}
+          >
+            <MenuItem value={"Album of the Week"}>Album of the Week</MenuItem>
+            <MenuItem value={"Runner Up Album of the Week"}>Runner Up Album of the Week</MenuItem>
+            <MenuItem value={"Song of the Week"}>Song of the Week</MenuItem>
+            <MenuItem value={"Runner Up Song of the Week"}>Runner Up Song of the Week</MenuItem>
+          </Select>
+        </FormControl>
+        </div>
+   
+      <PrizeWheel options={wheelOptions} title={pick} />
+    </Box>
+     </div>
+      <br></br><br></br>
+</div>
+
+    </React.Fragment>
     
   );
 }

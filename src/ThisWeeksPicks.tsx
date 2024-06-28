@@ -27,6 +27,8 @@ const rows = [
 export default function ThisWeeksPicks() {
   return (
     <div className="cont">
+      <h3 style={{fontSize:35, textAlign:"center"}}>NEXT MEETING'S PICKS (09/XX/24)</h3>
+      <h3 style={{fontSize:20, textAlign:"center", marginBottom:15}}>WE MEET EVERY [DAY] AT [TIME] IN [LOCATION]</h3>
 <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -45,9 +47,6 @@ export default function ThisWeeksPicks() {
               key={row.pickId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              {/* <TableCell component="th" scope="row">
-             
-              </TableCell> */}
               <TableCell component="th" scope="row" align="left">{row.pickType}</TableCell>
               <TableCell align="left">{row.albumName}</TableCell>
               <TableCell align="right">{row.artistName}</TableCell>
