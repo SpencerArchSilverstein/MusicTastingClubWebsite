@@ -14,7 +14,7 @@ function App() {
   return (
     
     <div className="all" style={{ position: "relative" }}>
-
+  
       <header className="header">
         MUSIC TASTING CLUB
       </header>
