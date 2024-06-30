@@ -119,3 +119,14 @@
   align-items: center;
   padding-left:0px;
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .item {
+    flex: 1 1 100%;
+  }
+}
