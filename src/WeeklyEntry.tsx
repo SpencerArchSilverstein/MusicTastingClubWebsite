@@ -25,6 +25,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useMediaQuery } from '@mui/material';
 
 
 const colors: string[] = [
@@ -146,6 +147,8 @@ function makeRows(dates:Array<string>, quarterIndex:number){
 }
 
 export default function WeeklyEntry() {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -165,11 +168,6 @@ export default function WeeklyEntry() {
         break;
     }
   }, [value]);
-  const [aotw, setAotw] = useState<string[]>([ 'AotW1', 'AotW2','AotW3','AotW4','AotW5','AotW6'] );
-  const [ruaotw, setRuatw] = useState<string[]>(['RUAotW1', 'RUAotW2','RUAotW3','RUAotW4','RUAotW5','RUAotW6']);
-  const [sotw, setSotw] = useState<string[]>(['SotW1', 'SotW2','SAotW3','SotW4','SotW5','SotW6']);
-  const [rusotw, setRuaotw] = useState<string[]>(['RUSotW1', 'RUSotW2','RUSAotW3','RUSotW4','RUSAotW5','RUSotW6']);
-
   const [pick, setPick] = useState('Album of the Week');
   const [wheelOptions, setWheelOptions] = useState<string[]>([]);
 
@@ -197,10 +195,11 @@ export default function WeeklyEntry() {
     }
   }, [pick]);
 
-
-
   return (
+
     <React.Fragment>
+        {isMobile ? (<br></br>) : null} 
+
     <div className="cont">
       <h3 style={{fontSize:35, textAlign:"center", marginBottom:15}}>PREVIOUS PICKS</h3>
 <Box >
@@ -243,11 +242,11 @@ export default function WeeklyEntry() {
      
      <div style={{ margin: 0, padding: 0 }}>
 
-
+     {isMobile ? null : (
     <div style={{marginTop:60}}>
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
      
-        <div style={{paddingBottom:20, marginBottom:-70, minWidth:400}}>
+        <div style={{marginBottom:-80, minWidth:400}}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Pick</InputLabel>
           <Select
@@ -267,7 +266,7 @@ export default function WeeklyEntry() {
    
       <PrizeWheel options={wheelOptions} title={pick} />
     </Box>
-     </div>
+     </div>)}
       <br></br><br></br>
 </div>
 

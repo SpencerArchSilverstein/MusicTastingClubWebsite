@@ -15,7 +15,7 @@ function Socials(){
             
 
 <div className="inner-logo-cont"> 
-<a href="https://www.google.com/forms/about/" target="_blank" rel="noopener">
+<a href="https://www.google.com/forms/about/" target="_blank" rel="noopener noreferrer">
   <img src={googleFormImg} alt="Google Form Img" className="company-logos"></img>
 </a>
 <p>Interest Form</p>

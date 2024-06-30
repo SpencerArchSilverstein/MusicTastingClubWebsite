@@ -2,15 +2,22 @@ import React from 'react';
 import './salespitch.css';
 import OurMission from './mission';
 import ThisWeeksPicks from './ThisWeeksPicks';
+import ConditionalPhoneSignUp from './ConditionalPhoneSignUp';
+import { useMediaQuery } from '@mui/material';
+
+
+
 
 function SalesPitch(){
+    const isMobile =  useMediaQuery('(max-width: 768px)');
+ 
     return (
         <React.Fragment>
+        {isMobile ? (<br></br>) : null} 
         <div className="cont">
             <div className="my-centered-text">
             {/* <h2>DO YOU LIKE LISTENING TO MUSIC?  DO YOU LIKE TALKING ABOUT MUSIC? DO YOU WANT NEW MUSIC RECS?</h2> */}
-            <h3>DO YOU LIKE LISTENING TO, TALKING ABOUT, OR TRYING OUT NEW</h3>
-            <h2>MUSIC?</h2>
+            <h2>DO YOU LIKE LISTENING TO, TALKING ABOUT, OR TRYING OUT NEW MUSIC?</h2>
             {/* <h2>DO YOU LIKE TALKING ABOUT MUSIC?</h2>
             <h2>DO YOU LIKE TRYING OUT NEW MUSIC?</h2> */}
             <h1>THE MUSIC TASTING CLUB IS THE PLACE FOR YOU!</h1>
@@ -26,8 +33,10 @@ function SalesPitch(){
         </div>
         <OurMission></OurMission>
         <ThisWeeksPicks></ThisWeeksPicks>
+        {isMobile ? <ConditionalPhoneSignUp></ConditionalPhoneSignUp> : null}   
+       
         </React.Fragment>
     );
 }
 
-export default SalesPitch;
+  export default SalesPitch;

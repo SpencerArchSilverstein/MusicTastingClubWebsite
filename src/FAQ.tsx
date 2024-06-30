@@ -2,13 +2,21 @@ import React from 'react';
 import './App.css';
 import MyClubSchedule from './ClubSchedule';
 import Socials from './socials'
-
+import { useMediaQuery } from '@mui/material';
 
 
 export default function FAQ(){
+    const isMobile =  useMediaQuery('(max-width: 768px)');
+
     return (
+        <React.Fragment>
+
+       
+        {isMobile ? (<br></br>) : null} 
         <div className="faq">
-            <h2 style={{fontSize:50, textAlign:"center", marginBottom:15}}>FAQ</h2>
+                    
+
+            <h2 style={{fontSize:45, textAlign:"center", marginBottom:15}}>FAQ</h2>
       <h2>Q: When/Where does the club meet?</h2>
       <h3 className="answers">A: We meet every week at TIME on DAY in ROOM.</h3>
       
@@ -54,5 +62,6 @@ export default function FAQ(){
 <Socials></Socials>
 </div>
         </div>
+        </React.Fragment>
     )
 }
