@@ -4,7 +4,6 @@ import SalesPitch from './salespitch';
 import ImageScroller from './ImageScroller';
 import FAQ from './FAQ';
 import ExecBoard from './ExecBoard';
-// import StarterPacks from './StarterPacks';
 import WeeklyEntry from './WeeklyEntry';
 // import { render } from '@testing-library/react';
 // import {useState} from 'react';

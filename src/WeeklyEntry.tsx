@@ -26,6 +26,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useMediaQuery } from '@mui/material';
+import NameWheelData from './NameWheelData.json';
+import ControlledCheckbox from "./devSwitch";
 
 
 const colors: string[] = [
@@ -169,6 +171,10 @@ export default function WeeklyEntry() {
     }
   }, [value]);
   const [pick, setPick] = useState('Album of the Week');
+  const separateOptions = (str: string): string[] => {
+    return str.split(/(?=[A-Z])/);
+  };
+
   const [wheelOptions, setWheelOptions] = useState<string[]>([]);
 
   const handleChange2 = (event: SelectChangeEvent) => {
@@ -177,24 +183,25 @@ export default function WeeklyEntry() {
   };
 
   useEffect(() => {
+    let options: string[] = [];
     switch (pick) {
       case "Album of the Week":
-        setWheelOptions(['AotW1', 'AotW2', 'AotW3', 'AotW4', 'AotW5', 'AotW6']);
+        options = NameWheelData["AotW"];        
         break;
       case "Runner Up Album of the Week":
-        setWheelOptions(['RUAotW1', 'RUAotW2', 'RUAotW3', 'RUAotW4', 'RUAotW5', 'RUAotW6']);
+        options = NameWheelData["RUAotW"];
         break;
       case "Song of the Week":
-        setWheelOptions(['SotW1', 'SotW2', 'SotW3', 'SotW4', 'SotW5', 'SotW6']);
+        options = NameWheelData["SotW"];
         break;
       case "Runner Up Song of the Week":
-        setWheelOptions(['RUSotW1', 'RUSotW2', 'RUSotW3', 'RUSotW4', 'RUSotW5', 'RUSotW6']);
+        options = NameWheelData["RUSotW"];
         break;
       default:
-        setWheelOptions(['AotW1', 'AotW2', 'AotW3', 'AotW4', 'AotW5', 'AotW6']);
+        options = NameWheelData["AotW"];
     }
+   setWheelOptions(options);
   }, [pick]);
-
   return (
 
     <React.Fragment>
@@ -246,7 +253,7 @@ export default function WeeklyEntry() {
     <div style={{marginTop:60}}>
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
      
-        <div style={{marginBottom:-80, minWidth:400}}>
+        <div style={{marginBottom:0, minWidth:400}}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Pick</InputLabel>
           <Select
@@ -263,12 +270,17 @@ export default function WeeklyEntry() {
           </Select>
         </FormControl>
         </div>
+        
    
       <PrizeWheel options={wheelOptions} title={pick} />
     </Box>
-     </div>)}
+    </div>)}
+ 
       <br></br><br></br>
+     
+      
 </div>
+    
 
     </React.Fragment>
     

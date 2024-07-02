@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
+import { Box, TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import ControlledCheckbox from './devSwitch';
 
 interface PrizeWheelProps {
   options: string[];
@@ -33,16 +32,13 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
     }
   }, [pick]);
 
-
-
-
-
   const [spinning, setSpinning] = useState(false);
   const [angle, setAngle] = useState(0);
   const [selectedPrize, setSelectedPrize] = useState<string | null>(null);
   const [prizeList, setPrizeList] = useState(options);
   const [inputValue, setInputValue] = useState(options.join(', '));
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [checked, setChecked] = React.useState(true);
 
   const spin = () => {
     if (spinning) return;
@@ -81,11 +77,23 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
   };
 
   const handleDialogClose = () => {
-    const updatedPrizeList = prizeList.filter(prize => prize !== selectedPrize);
-    setPrizeList(updatedPrizeList);
-    setInputValue(updatedPrizeList.join(', '));
+    setPrizeList(prevPrizeList => {
+      const updatedPrizeList = prevPrizeList.filter(prize => prize !== selectedPrize);
+      setInputValue(updatedPrizeList.join(', '));
+      return updatedPrizeList;
+    });
     setSelectedPrize(null);
   };
+
+  const handleCopyToClipboard = () => {
+    const textToCopy = `${JSON.stringify(prizeList)}`;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      console.log('Copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  };
+
   useEffect(() => {
     setPrizeList(options);
     setInputValue(options.join(', '));
@@ -175,16 +183,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
     <React.Fragment>
      
       <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', height: '80vh' }}>
-      
-      
-      
-
-
-
-
-        {/* <div style={{ paddingBottom: 10 }}>
-          <h1>{title}</h1>
-        </div> */}
+      <br></br>  <br></br>  <br></br> 
         <canvas
           ref={canvasRef}
           width={400}
@@ -201,6 +200,22 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
           value={inputValue}
           sx={{ width: 500, marginTop: 3 }}
         />
+          <br></br>  <br></br>
+          
+          {checked ?  
+          (<Box display="flex" alignItems="center" color="lightgray">
+          <h1>{JSON.stringify(prizeList)}</h1>
+          <IconButton onClick={handleCopyToClipboard} sx={{ color: 'lightgray' }}>
+            <ContentCopyIcon />
+          </IconButton>
+        </Box>)  
+        : null} 
+       
+    <div style={{display:"flex",alignItems:"left",color:"lightgray"}}>
+      <p style={{fontSize:20,marginBottom:7, marginRight:-5}}>DEV</p>
+      <ControlledCheckbox checked={checked} setChecked={setChecked}/>
+      </div>  
+   
         <Dialog
           open={!!selectedPrize}
           onClose={handleDialogClose}
@@ -225,6 +240,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
           </DialogActions>
         </Dialog>
       </Box>
+     
     </React.Fragment>
   );
 };
