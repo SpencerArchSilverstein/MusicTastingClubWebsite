@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import SalesPitch from './salespitch';
+import SalesPitch from './SP/salespitch';
 import ImageScroller from './ImageScroller';
 import FAQ from './FAQ';
 import ExecBoard from './ExecBoard';
-import WeeklyEntry from './WeeklyEntry';
+import WeeklyEntry from './WE/WeeklyEntry';
 // import { render } from '@testing-library/react';
 // import {useState} from 'react';
 import BlackButton from './BlackButton1';

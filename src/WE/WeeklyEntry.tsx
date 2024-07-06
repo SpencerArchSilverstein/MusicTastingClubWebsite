@@ -1,32 +1,19 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import {
+  Tabs, Tab, Box, Collapse, IconButton, Table, TableBody, TableCell, TableContainer, 
+  TableHead, TableRow, Paper, InputLabel, MenuItem, FormControl, Select, useMediaQuery 
+} from '@mui/material';
+import { SelectChangeEvent } from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import picksData from './picksData.js';
 import {useState, useEffect} from 'react';
-import './mission.css';
+import '../SP/mission.css';
 import MemberPicksOrNotPicks from './PickChips';
 import {pickOrNotListFall24} from './PickChipsData';
-import ThisWeeksPicks from './ThisWeeksPicks';
 import PrizeWheel from './NameWheel';
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { useMediaQuery } from '@mui/material';
-import NameWheelData from './NameWheelData.json';
+import ThisWeeksPicks from './../SP/ThisWeeksPicks';
+import NameWheelData from '../NameWheelData.json';
 
 
 const colors: string[] = [

@@ -2,11 +2,8 @@ import React from 'react';
 import './salespitch.css';
 import OurMission from './mission';
 import ThisWeeksPicks from './ThisWeeksPicks';
-import ConditionalPhoneSignUp from './ConditionalPhoneSignUp';
+import ConditionalPhoneSignUp from '../ConditionalPhoneSignUp';
 import { useMediaQuery } from '@mui/material';
-
-
-
 
 function SalesPitch(){
     const isMobile =  useMediaQuery('(max-width: 768px)');

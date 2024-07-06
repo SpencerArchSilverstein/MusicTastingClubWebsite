@@ -1,5 +1,5 @@
 import React from 'react';
-import './mission.css';
+import './SP/mission.css';
 import myimg from "./imgs/logo.png";
 import { useMediaQuery } from '@mui/material';
 
@@ -15,7 +15,6 @@ const execBoardList:Array<[string,string,string,any]> = [
 ];
 
 export default function ExecBoard() {
-
     const isMobile =  useMediaQuery('(max-width: 768px)');
     return (
         <React.Fragment>
@@ -23,8 +22,6 @@ export default function ExecBoard() {
         <div className="ebc">
             <h2 className="exec-board-title">MEET THE EXEC BOARD!</h2>
                         <div className="exec-board-container">
-                        
-
             {execBoardList.map((item,index) => (
               <div key={index} className="exec-board-item">
                 <img src={item[3]} alt="profile_pic" className="exec-board-img"></img>
@@ -36,7 +33,5 @@ export default function ExecBoard() {
         </div>
         </div>
         </React.Fragment>
-       
-        
     );
   }

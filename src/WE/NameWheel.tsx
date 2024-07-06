@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import ControlledCheckbox from './devSwitch';
+import ControlledCheckbox from '../devSwitch';
 
 interface PrizeWheelProps {
   options: string[];
