@@ -27,7 +27,6 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useMediaQuery } from '@mui/material';
 import NameWheelData from './NameWheelData.json';
-import ControlledCheckbox from "./devSwitch";
 
 
 const colors: string[] = [
@@ -44,7 +43,7 @@ const colors: string[] = [
 
 function createData2(
   name: string,
-  picks: Array<{pickId: number, pickType: string, albumName: string, artistName: string, memberName: string}>
+  picks: Array<{pickId: number, pickType: string, songOrAlbumName: string, artistName: string, memberName: string}>
 ) {
   return {
     name,
@@ -123,7 +122,7 @@ function Row(props: { row: ReturnType<typeof createData2> }) {
                       <TableCell component="th" scope="row">
                         {historyRow.pickType}
                       </TableCell>
-                    <TableCell>{historyRow.albumName}</TableCell>
+                    <TableCell>{historyRow.songOrAlbumName}</TableCell>
                       <TableCell align="right">{historyRow.artistName}</TableCell>
                       <TableCell align="right"> 
                         {historyRow.memberName}

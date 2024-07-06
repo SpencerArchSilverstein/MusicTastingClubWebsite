@@ -10,16 +10,16 @@ import './mission.css';
 
 
 function createData2(
-    pickId: number, pickType: string, albumName: string, artistName: string, memberName: string
+    pickId: number, pickType: string, songOrAlbumName: string, artistName: string, memberName: string
   ) {
     return {
-    pickId, pickType, albumName, artistName, memberName
+    pickId, pickType, songOrAlbumName, artistName, memberName
     };
   }
 
 const rows = [
-    createData2(-1,"Album of the Week","AlbumName","ArtistName","MemberName"),
-    createData2(-2,"Runner Up Album of the Week", "AlbumName", "ArtistName","MemberName"),
+    createData2(-1,"Album of the Week","songOrAlbumName","ArtistName","MemberName"),
+    createData2(-2,"Runner Up Album of the Week", "songOrAlbumName", "ArtistName","MemberName"),
     createData2(-3,"Song of the Week","SongmName","ArtistName","MemberName"),
     createData2(-4,"Runner Up Song of the Week", "SongName", "ArtistName","MemberName"),
 ];
@@ -48,7 +48,7 @@ export default function ThisWeeksPicks() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row" align="left">{row.pickType}</TableCell>
-              <TableCell align="left">{row.albumName}</TableCell>
+              <TableCell align="left">{row.songOrAlbumName}</TableCell>
               <TableCell align="right">{row.artistName}</TableCell>
               <TableCell align="right">{row.memberName}</TableCell>
             </TableRow>

@@ -38,7 +38,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
   const [prizeList, setPrizeList] = useState(options);
   const [inputValue, setInputValue] = useState(options.join(', '));
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(false);
 
   const spin = () => {
     if (spinning) return;
