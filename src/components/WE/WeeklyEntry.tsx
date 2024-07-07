@@ -6,14 +6,14 @@ import {
 import { SelectChangeEvent } from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import picksData from './picksData.js';
+import picksData from './picksData';
 import {useState, useEffect} from 'react';
 import '../SP/mission.css';
 import MemberPicksOrNotPicks from './PickChips';
-import {pickOrNotListFall24} from './PickChipsData';
+import { pickOrNotListFall24 } from './PickChipsData';
 import PrizeWheel from './NameWheel';
-import ThisWeeksPicks from './../SP/ThisWeeksPicks';
-import NameWheelData from '../NameWheelData.json';
+import ThisWeeksPicks from '../SP/ThisWeeksPicks';
+import NameWheelData from './NameWheelData.json';
 
 
 const colors: string[] = [
@@ -55,7 +55,9 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
+
       {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+
     </div>
   );
 }
@@ -256,18 +258,11 @@ export default function WeeklyEntry() {
           </Select>
         </FormControl>
         </div>
-        
-   
       <PrizeWheel options={wheelOptions} title={pick} />
     </Box>
     </div>)}
- 
-      <br></br><br></br>
-     
-      
+      <br></br><br></br>   
 </div>
-    
-
     </React.Fragment>
     
   );

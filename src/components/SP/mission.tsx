@@ -1,6 +1,6 @@
 import React from 'react';
 import './mission.css';
-import img from "../imgs/logo.png";
+import img from "../../imgs/logo.png";
 
 function OurMission() {
     return (

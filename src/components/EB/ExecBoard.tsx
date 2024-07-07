@@ -1,6 +1,6 @@
 import React from 'react';
-import './SP/mission.css';
-import myimg from "./imgs/logo.png";
+import '../SP/mission.css';
+import myimg from "../../imgs/logo.png";
 import { useMediaQuery } from '@mui/material';
 
 const execBoardList:Array<[string,string,string,any]> = [

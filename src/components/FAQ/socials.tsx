@@ -1,12 +1,12 @@
 import React from 'react';
 import './socials.css';
-import spotifyImg from "./imgs/spotlogo.png";
-import instaImg from "./imgs/instalogo.png";
-import appMusImg from "./imgs/applemusiclogo.png";
-import discordImg from "./imgs/discordlogo.png";
-import googleFormImg from "./imgs/googleformlogo.png";
-import twitterImg from "./imgs/twitterlogo.png";
-import listservImg from "./imgs/listservimg.png";
+import spotifyImg from "../../imgs/spotlogo.png";
+import instaImg from "../../imgs/instalogo.png";
+import appMusImg from "../../imgs/applemusiclogo.png";
+import discordImg from "../../imgs/discordlogo.png";
+import googleFormImg from "../../imgs/googleformlogo.png";
+import twitterImg from "../../imgs/twitterlogo.png";
+import listservImg from "../../imgs/listservimg.png";
 
 function Socials(){
     return (
@@ -60,6 +60,8 @@ target = "_blank" rel = "noopener noreferrer">
 </a><p>Join Our Listserv!</p>
 
 </div>
+<img src={"https://i.scdn.co/image/ab67616d00001e02d95ab48a8a9de3c4a2cbfe80"} alt="Google Form Img" className="company-logos"></img>
+
 </div>
     </React.Fragment>
     );

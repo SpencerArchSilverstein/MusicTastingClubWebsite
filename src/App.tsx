@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import SalesPitch from './SP/salespitch';
+import SalesPitch from './components/SP/salespitch';
 import ImageScroller from './ImageScroller';
-import FAQ from './FAQ';
-import ExecBoard from './ExecBoard';
-import WeeklyEntry from './WE/WeeklyEntry';
+import FAQComponent from './components/FAQ/FAQComponent';
+import ExecBoard from './components/EB/ExecBoard';
+import WeeklyEntry from './components/WE/WeeklyEntry';
 // import { render } from '@testing-library/react';
 // import {useState} from 'react';
 import BlackButton from './BlackButton1';
@@ -28,7 +28,7 @@ function App() {
       case 1:
         return <WeeklyEntry />;
       case 2:
-        return <FAQ />;
+        return <FAQComponent />;
       case 3:
         return <ExecBoard />;
       default:
