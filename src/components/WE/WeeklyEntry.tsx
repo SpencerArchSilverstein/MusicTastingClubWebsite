@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
-  Tabs, Tab, Box, Collapse, IconButton, Table, TableBody, TableCell, TableContainer, 
-  TableHead, TableRow, Paper, InputLabel, MenuItem, FormControl, Select, useMediaQuery 
+  Tabs, Tab, Box, Collapse, IconButton, Table, TableBody, TableCell, TableContainer,
+  TableHead, TableRow, Paper, InputLabel, MenuItem, FormControl, Select, useMediaQuery
 } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import picksData from './picksData';
-import {useState, useEffect} from 'react';
+import picksData from './picksData2.json';
+import { useState, useEffect } from 'react';
 import '../SP/mission.css';
 import MemberPicksOrNotPicks from './PickChips';
 import { pickOrNotListFall24 } from './PickChipsData';
@@ -15,28 +15,9 @@ import PrizeWheel from './NameWheel';
 import ThisWeeksPicks from '../SP/ThisWeeksPicks';
 import NameWheelData from './NameWheelData.json';
 
-
-const colors: string[] = [
-  'rgba(255, 99, 132, 0.5)',
-  'rgba(54, 162, 235, 0.5)',
-  'rgba(255, 206, 86, 0.5)',
-  'rgba(75, 192, 192, 0.5)',
-  'rgba(153, 102, 255, 0.5)',
-  'rgba(255, 159, 64, 0.5)',
-  'rgba(199, 199, 199, 0.5)',
-  'rgba(83, 102, 255, 0.5)',
-  'rgba(104, 159, 56, 0.5)'
-];
-
-function createData2(
-  name: string,
-  picks: Array<{pickId: number, pickType: string, songOrAlbumName: string, artistName: string, memberName: string}>
-) {
-  return {
-    name,
-    picks,
-  };
-}
+const colors: string[] = ['rgba(255, 99, 132, 0.5)','rgba(54, 162, 235, 0.5)','rgba(255, 206, 86, 0.5)',
+  'rgba(75, 192, 192, 0.5)','rgba(153, 102, 255, 0.5)','rgba(255, 159, 64, 0.5)',
+  'rgba(199, 199, 199, 0.5)','rgba(83, 102, 255, 0.5)','rgba(104, 159, 56, 0.5)'];
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -55,9 +36,7 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-
       {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-
     </div>
   );
 }
@@ -69,112 +48,22 @@ function a11yProps(index: number) {
   };
 }
 
-function Row(props: { row: ReturnType<typeof createData2> }) {
-  const { row } = props;
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        
-        <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </TableCell>
-
-        <TableCell align="left">
-          <b>{row.name}</b>
-        </TableCell>
-      </TableRow>
-
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 2 }}>
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell><b>Pick Type</b></TableCell>
-                    <TableCell><b>Album/Song Name</b></TableCell>
-                    <TableCell align="right"><b>Artist</b></TableCell>
-                    <TableCell align="right"><b>Member</b></TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                {row.picks.map((historyRow) => (
-                    <TableRow key={historyRow.pickType}>
-                      <TableCell component="th" scope="row">
-                        {historyRow.pickType}
-                      </TableCell>
-                    <TableCell>{historyRow.songOrAlbumName}</TableCell>
-                      <TableCell align="right">{historyRow.artistName}</TableCell>
-                      <TableCell align="right"> 
-                        {historyRow.memberName}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
-    </React.Fragment>
-  );
-}
-
-function makeRows(dates:Array<string>, quarterIndex:number){
-  var rows = [];
-  for (var i = 0; i < dates.length; i++){
-    rows.push(createData2('WEEK ' + (i+1) + ' PICKS ' + dates[i],picksData[quarterIndex][i]));
-  }
-  return rows;
-}
-
 export default function WeeklyEntry() {
   const isMobile = useMediaQuery('(max-width: 768px)');
-
   const [value, setValue] = React.useState(0);
+  const [pick, setPick] = useState('Album of the Week');
+  const [wheelOptions, setWheelOptions] = useState<string[]>([]);
+  const [openRow, setOpenRow] = useState<number | null>(null);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-  };
-  
-  useEffect(() => {
-    switch (value){
-      case 0:
-        console.log("Tab: WQ24");
-        break;
-      case 1:
-        console.log("Tab: SQ24");
-        break;
-      case 2:
-        console.log("Tab: FQ24");
-        break;
-    }
-  }, [value]);
-  const [pick, setPick] = useState('Album of the Week');
-  const separateOptions = (str: string): string[] => {
-    return str.split(/(?=[A-Z])/);
-  };
-
-  const [wheelOptions, setWheelOptions] = useState<string[]>([]);
-
-  const handleChange2 = (event: SelectChangeEvent) => {
-    const selectedPick = event.target.value as string;
-    setPick(selectedPick);
   };
 
   useEffect(() => {
     let options: string[] = [];
     switch (pick) {
       case "Album of the Week":
-        options = NameWheelData["AotW"];        
+        options = NameWheelData["AotW"];
         break;
       case "Runner Up Album of the Week":
         options = NameWheelData["RUAotW"];
@@ -188,84 +77,136 @@ export default function WeeklyEntry() {
       default:
         options = NameWheelData["AotW"];
     }
-   setWheelOptions(options);
+    setWheelOptions(options);
   }, [pick]);
+
+  const handlePickChange = (event: SelectChangeEvent) => {
+    const selectedPick = event.target.value as string;
+    setPick(selectedPick);
+  };
+
+  const handleRowClick = (index: number) => {
+    setOpenRow(openRow === index ? null : index);
+  };
+
+  const renderRows = (weeks: any) => {
+    return weeks.map((week: any, index: number) => (
+      <React.Fragment key={week.weekId}>
+        <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+          <TableCell>
+            <IconButton
+              aria-label="expand row"
+              size="small"
+              onClick={() => handleRowClick(index)}
+            >
+              {openRow === index ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            </IconButton>
+          </TableCell>
+          <TableCell align="left">
+            <b>{week.weekName} PICKS {week.weekDate}</b>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+            <Collapse in={openRow === index} timeout="auto" unmountOnExit>
+              <Box sx={{ margin: 2 }}>
+                <Table size="small" aria-label="purchases">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell><b>Pick Type</b></TableCell>
+                      <TableCell><b>Album/Song Name</b></TableCell>
+                      <TableCell align="right"><b>Artist</b></TableCell>
+                      <TableCell align="right"><b>Member</b></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {week.picks.map((pick: any) => (
+                      <TableRow key={pick.pickId}>
+                        <TableCell component="th" scope="row">
+                          {pick.pickData.pickType}
+                        </TableCell>
+                        <TableCell>{pick.pickData.songOrAlbumName}</TableCell>
+                        <TableCell align="right">{pick.pickData.artistName}</TableCell>
+                        <TableCell align="right">{pick.pickData.memberName}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Box>
+            </Collapse>
+          </TableCell>
+        </TableRow>
+      </React.Fragment>
+    ));
+  };
+
   return (
-
     <React.Fragment>
-        {isMobile ? (<br></br>) : null} 
-
-    <div className="cont">
-      <h3 style={{fontSize:35, textAlign:"center", marginBottom:15}}>PREVIOUS PICKS</h3>
-<Box >
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="WQ24 Picks" {...a11yProps(0)} sx={{width:'33%'}}/>
-          <Tab label="SQ24 Picks" {...a11yProps(1)} sx={{width:'33%'}}/>
-          <Tab label="FQ24 Picks" {...a11yProps(2)} sx={{width:'33%'}}/>
-          {/* <Tab label="THIS WEEK'S PICKS" {...a11yProps(3)} /> */}
-        </Tabs>
-      </Box>
-      <CustomTabPanel value={value} index={0}>
-      <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
-        <TableBody>
-          {makeRows(["(1/11/24)","(1/18/24)","(1/25/24)","(2/1/24)","(2/8/24)","(2/15/24)","(2/22/24)","(2/29/24)","(3/7/24)"],0).map((row) => (
-            <Row key={row.name} row={row} />
-          ))}         
-        </TableBody>
-      </Table>    
-    </TableContainer>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
-        <TableBody>
-          {makeRows(["(4/1/24)","(4/8/24)","(4/15/24)","(4/22/24)","(4/29/24)","(5/6/24)","(5/13/24)","(5/20/24)"],1).map((row) => (
-            <Row key={row.name} row={row} />
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
-      </CustomTabPanel>
-    </Box>
-    </div>
-    <div style={{marginTop:40}}>
-    <ThisWeeksPicks></ThisWeeksPicks> 
-    </div>
-     
-     <div style={{ margin: 0, padding: 0 }}>
-
-     {isMobile ? null : (
-    <div style={{marginTop:60}}>
-    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
-     
-        <div style={{marginBottom:0, minWidth:400}}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Pick</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={pick}
-            label="Pick"
-            onChange={handleChange2}
-          >
-            <MenuItem value={"Album of the Week"}>Album of the Week</MenuItem>
-            <MenuItem value={"Runner Up Album of the Week"}>Runner Up Album of the Week</MenuItem>
-            <MenuItem value={"Song of the Week"}>Song of the Week</MenuItem>
-            <MenuItem value={"Runner Up Song of the Week"}>Runner Up Song of the Week</MenuItem>
-          </Select>
-        </FormControl>
-        </div>
-      <PrizeWheel options={wheelOptions} title={pick} />
-    </Box>
-    </div>)}
-      <br></br><br></br>   
-</div>
+      {isMobile ? (<br></br>) : null}
+      <div className="cont">
+        <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>PREVIOUS PICKS</h3>
+        <Box>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+              <Tab label="WQ24 Picks" {...a11yProps(0)} sx={{ width: '33%' }} />
+              <Tab label="SQ24 Picks" {...a11yProps(1)} sx={{ width: '33%' }} />
+              <Tab label="FQ24 Picks" {...a11yProps(2)} sx={{ width: '33%' }} />
+            </Tabs>
+          </Box>
+          <CustomTabPanel value={value} index={0}>
+            <TableContainer component={Paper}>
+              <Table aria-label="collapsible table">
+                <TableBody>
+                  {renderRows(picksData[0].weeks)}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={1}>
+            <TableContainer component={Paper}>
+              <Table aria-label="collapsible table">
+                <TableBody>
+                  {renderRows(picksData[1].weeks)}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={2}>
+            {/* Add content for FQ24 Picks if available */}
+          </CustomTabPanel>
+        </Box>
+      </div>
+      <div style={{ marginTop: 40 }}>
+        <ThisWeeksPicks></ThisWeeksPicks>
+      </div>
+      <div style={{ margin: 0, padding: 0 }}>
+        {isMobile ? null : (
+          <div style={{ marginTop: 60 }}>
+            <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
+              <div style={{ marginBottom: 0, minWidth: 400 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Pick</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={pick}
+                    label="Pick"
+                    onChange={handlePickChange}
+                  >
+                    <MenuItem value={"Album of the Week"}>Album of the Week</MenuItem>
+                    <MenuItem value={"Runner Up Album of the Week"}>Runner Up Album of the Week</MenuItem>
+                    <MenuItem value={"Song of the Week"}>Song of the Week</MenuItem>
+                    <MenuItem value={"Runner Up Song of the Week"}>Runner Up Song of the Week</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
+              <PrizeWheel options={wheelOptions} title={pick} />
+            </Box>
+          </div>
+        )}
+        <br></br><br></br>
+      </div>
     </React.Fragment>
-    
   );
 }
-
-
