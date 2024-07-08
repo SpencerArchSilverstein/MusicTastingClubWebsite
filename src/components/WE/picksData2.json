@@ -198,5 +198,23 @@
                 ]
             }
         ]
+    },
+    {   
+        "quarterId": 2,
+        "quarterName": "FQ24",
+        "weeks": 
+        [
+            {
+                "weekId": 17,
+                "weekName": "WEEK 1",
+                "weekDate": "(9//24)",
+                "picks": [
+                    { "pickId": 68, "pickData": {"pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A"} },
+                    { "pickId": 69, "pickData": {"pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" } },
+                    { "pickId": 70, "pickData": {"pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A"} },
+                    { "pickId": 71, "pickData": {"pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" } }
+                ]
+            }
+        ]
     }
 ]
