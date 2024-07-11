@@ -58,7 +58,6 @@ const Blog: React.FC = () => {
 
     const [reviews, setReviews] = useState<Review[]>([]);
     const [articles, setArticles] = useState<Article[]>([]);
-    const [isBlogCont, setIsBlogCont] = useState(false);
     const [selectedBlog, setSelectedBlog] = useState<{ contId: number; contTitle: string; contContent: string;} | null>(null);
 
 
@@ -83,15 +82,7 @@ const Blog: React.FC = () => {
 
     return (
         <React.Fragment>
-        {isBlogCont ? 
-        
-        ( <div className={isMobile ? "blog-cont2" : "blog-cont"}>
-            <IconButton onClick={() => {setIsBlogCont(!isBlogCont); setSelectedBlog(null);}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></IconButton>
-            <h1 style={{textAlign:"center",color:"gray"}}>{selectedBlog?.contTitle}</h1>
-            <h5>{selectedBlog?.contContent}</h5>
-        </div>)
-        : 
-        
+        {selectedBlog == null ? 
         (
             <React.Fragment>
         {isMobile ? (<br></br>) : null} 
@@ -100,7 +91,7 @@ const Blog: React.FC = () => {
             <div className="blog-items-cont">
             {articles.map((article) => (
                 <div className="blog-items" key={article.articleId}>
-                <Card sx={{  marginBottom: 2 }} key={article.articleId} onClick={() => { setIsBlogCont(true); setSelectedBlog({contId:article.articleId,contTitle:article.articleTitle,contContent: article.articleContent}); }}>
+                <Card sx={{  marginBottom: 2 }} key={article.articleId} onClick={() => { setSelectedBlog({contId:article.articleId,contTitle:article.articleTitle,contContent: article.articleContent}); }}>
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -128,7 +119,7 @@ const Blog: React.FC = () => {
             <div className="blog-items-cont">
             {reviews.map((review) => (
                 <div className="blog-items" key={review.reviewId}>
-                <Card sx={{ marginBottom: 2 }} key={review.reviewId} onClick={() => { setIsBlogCont(true); setSelectedBlog({contId:review.reviewId,contTitle:review.reviewTitle,contContent: review.reviewContent}); }}>
+                <Card sx={{ marginBottom: 2 }} key={review.reviewId} onClick={() => { setSelectedBlog({contId:review.reviewId,contTitle:review.reviewTitle,contContent: review.reviewContent}); }}>
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -151,7 +142,14 @@ const Blog: React.FC = () => {
             </div>
         </div>
         </React.Fragment>
-         )}
+         ):
+         ( <div className={isMobile ? "blog-cont2" : "blog-cont"}>
+         <IconButton onClick={() => {setSelectedBlog(null);}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></IconButton>
+         <h1 style={{textAlign:"center",color:"gray"}}>{selectedBlog?.contTitle}</h1>
+         <h5>{selectedBlog?.contContent}</h5>
+     </div>)
+        
+        }
        
          
         </React.Fragment>
