@@ -55,12 +55,12 @@ target = "_blank" rel = "noopener noreferrer">
 </a><p>Follow Us!</p></div>
 </div>
 <div className="inner-logo-cont">
-<a href="google.com" target="_blank" rel="noopener noreferrer">
+<a href="https://google.com" target="_blank" rel="noopener noreferrer">
     <img src={listservImg} alt="ListservLink" className="company-logos" style={{borderRadius:10}}></img>
 </a><p>Join Our Listserv!</p>
 
 </div>
-<img src={"https://i.scdn.co/image/ab67616d00001e02d95ab48a8a9de3c4a2cbfe80"} alt="Google Form Img" className="company-logos"></img>
+{/* <img src={"https://i.scdn.co/image/ab67616d00001e02d95ab48a8a9de3c4a2cbfe80"} alt="Google Form Img" className="company-logos"></img> */}
 
 </div>
     </React.Fragment>

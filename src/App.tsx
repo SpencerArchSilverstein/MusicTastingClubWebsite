@@ -3,13 +3,12 @@ import './App.css';
 import SalesPitch from './components/SP/salespitch';
 import ImageScroller from './ImageScroller';
 import FAQComponent from './components/FAQ/FAQComponent';
-import ExecBoard from './components/EB/ExecBoard';
+import ExecBoard from './components/ABOUT/ExecBoard';
 import WeeklyEntry from './components/WE/WeeklyEntry';
-// import { render } from '@testing-library/react';
-// import {useState} from 'react';
 import BlackButton from './BlackButton1';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MobileComponent from './MobileComponent';
+import Blog from './components/BLOG/Blog';
 
 
 function App() {
@@ -31,6 +30,8 @@ function App() {
         return <FAQComponent />;
       case 3:
         return <ExecBoard />;
+      case 4:
+        return <Blog />;
       default:
         return <SalesPitch />;
   }};
@@ -57,6 +58,7 @@ function App() {
             <p className="nav-item" onClick={() => handleChange(1)}><BlackButton buttonText="Picks" /></p>
             <p className="nav-item" onClick={() => handleChange(2)}><BlackButton buttonText="FAQ" /></p>
             <p className="nav-item" onClick={() => handleChange(3)}><BlackButton buttonText="About" /></p>
+            <p className="nav-item" onClick={() => handleChange(4)}><BlackButton buttonText="Blog" /></p>
           </div>
         )}
 {renderNewPage()}

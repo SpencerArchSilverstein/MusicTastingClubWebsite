@@ -45,6 +45,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ handleChange }) => {
         <MenuItem onClick={() => { handleChange(3); handleClose(); }}>
           <BlackButton buttonText="About" />
         </MenuItem>
+        <MenuItem onClick={() => { handleChange(4); handleClose(); }}>
+        <BlackButton buttonText="Blog" />
+        </MenuItem>
       </Menu>
     </div>
   );

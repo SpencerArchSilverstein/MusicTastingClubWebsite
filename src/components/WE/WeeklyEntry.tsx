@@ -15,9 +15,17 @@ import PrizeWheel from './NameWheel';
 import ThisWeeksPicks from '../SP/ThisWeeksPicks';
 import NameWheelData from './NameWheelData.json';
 
-const colors: string[] = ['rgba(255, 99, 132, 0.5)','rgba(54, 162, 235, 0.5)','rgba(255, 206, 86, 0.5)',
-  'rgba(75, 192, 192, 0.5)','rgba(153, 102, 255, 0.5)','rgba(255, 159, 64, 0.5)',
-  'rgba(199, 199, 199, 0.5)','rgba(83, 102, 255, 0.5)','rgba(104, 159, 56, 0.5)'];
+const colors: string[] = [
+  'rgba(255, 99, 132, 0.5)',
+  'rgba(54, 162, 235, 0.5)',
+  'rgba(255, 206, 86, 0.5)',
+  'rgba(75, 192, 192, 0.5)',
+  'rgba(153, 102, 255, 0.5)',
+  'rgba(255, 159, 64, 0.5)',
+  'rgba(199, 199, 199, 0.5)',
+  'rgba(83, 102, 255, 0.5)',
+  'rgba(104, 159, 56, 0.5)'
+];
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -114,7 +122,7 @@ export default function WeeklyEntry() {
                   <TableHead>
                     <TableRow>
                       <TableCell><b>Pick Type</b></TableCell>
-                      <TableCell><b>Album/Song Name</b></TableCell>
+                      <TableCell><b>Pick Name</b></TableCell>
                       <TableCell align="right"><b>Artist</b></TableCell>
                       <TableCell align="right"><b>Member</b></TableCell>
                     </TableRow>
@@ -123,11 +131,11 @@ export default function WeeklyEntry() {
                     {week.picks.map((pick: any) => (
                       <TableRow key={pick.pickId}>
                         <TableCell component="th" scope="row">
-                          {pick.pickData.pickType}
+                          {pick.pickType}
                         </TableCell>
-                        <TableCell>{pick.pickData.songOrAlbumName}</TableCell>
-                        <TableCell align="right">{pick.pickData.artistName}</TableCell>
-                        <TableCell align="right">{pick.pickData.memberName}</TableCell>
+                        <TableCell>{pick.songOrAlbumName}</TableCell>
+                        <TableCell align="right">{pick.artistName}</TableCell>
+                        <TableCell align="right">{pick.memberName}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -148,33 +156,25 @@ export default function WeeklyEntry() {
         <Box>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="WQ24 Picks" {...a11yProps(0)} sx={{ width: '33%' }} />
-              <Tab label="SQ24 Picks" {...a11yProps(1)} sx={{ width: '33%' }} />
-              <Tab label="FQ24 Picks" {...a11yProps(2)} sx={{ width: '33%' }} />
+              {picksData.map((quarter, index) => (
+                <Tab key={quarter.quarterId} label={`${quarter.quarterName} Picks`} {...a11yProps(index)} sx={{ width: '33%' }} />
+              ))}
             </Tabs>
           </Box>
-          <CustomTabPanel value={value} index={0}>
-            <TableContainer component={Paper}>
-              <Table aria-label="collapsible table">
-                <TableBody>
-                  {renderRows(picksData[0].weeks)}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1}>
-            <TableContainer component={Paper}>
-              <Table aria-label="collapsible table">
-                <TableBody>
-                  {renderRows(picksData[1].weeks)}
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={2}>
-            {/* Add content for FQ24 Picks if available */}
-          </CustomTabPanel>
+          {picksData.map((quarter, index) => (
+            <CustomTabPanel key={quarter.quarterId} value={value} index={index}>
+              <TableContainer component={Paper}>
+                <Table aria-label="collapsible table">
+                  <TableBody>
+                    {renderRows(quarter.weeks)}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+              {index === 1 && (
+                <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
+              )}
+            </CustomTabPanel>
+          ))}
         </Box>
       </div>
       <div style={{ marginTop: 40 }}>
