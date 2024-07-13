@@ -179,34 +179,13 @@ export default function WeeklyEntry() {
       </div>
       <div style={{ marginTop: 40 }}>
         <ThisWeeksPicks></ThisWeeksPicks>
-      </div>
-      <div style={{ margin: 0, padding: 0 }}>
+        <div style={{ marginTop: 50, padding: 0 }}>
         {isMobile ? null : (
-          <div style={{ marginTop: 60 }}>
-            <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
-              <div style={{ marginBottom: 0, minWidth: 400 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Pick</InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={pick}
-                    label="Pick"
-                    onChange={handlePickChange}
-                  >
-                    <MenuItem value={"Album of the Week"}>Album of the Week</MenuItem>
-                    <MenuItem value={"Runner Up Album of the Week"}>Runner Up Album of the Week</MenuItem>
-                    <MenuItem value={"Song of the Week"}>Song of the Week</MenuItem>
-                    <MenuItem value={"Runner Up Song of the Week"}>Runner Up Song of the Week</MenuItem>
-                  </Select>
-                </FormControl>
-              </div>
-              <PrizeWheel options={wheelOptions} title={pick} />
-            </Box>
-          </div>
+        <PrizeWheel options={wheelOptions} title={pick} handlePickChange={handlePickChange} nameWheelDataToBeCopied={NameWheelData}/>          
         )}
-        <br></br><br></br>
+           </div>
       </div>
+        <br></br><br></br>
     </React.Fragment>
   );
 }

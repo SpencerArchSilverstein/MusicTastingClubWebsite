@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton } from '@mui/material';
+import { Box, TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, FormControl, InputLabel, MenuItem } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ControlledCheckbox from '../../devSwitch';
@@ -7,13 +7,16 @@ import ControlledCheckbox from '../../devSwitch';
 interface PrizeWheelProps {
   options: string[];
   title: string;
+  handlePickChange: (event: SelectChangeEvent) => void;
+  nameWheelDataToBeCopied: { AotW: string[], RUAotW: string[], SotW: string[], RUSotW: string[] };
 }
 
-const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
+const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange,nameWheelDataToBeCopied}) => {
   const [pick, setPick] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setPick(event.target.value as string);
+    handlePickChange(event);
   };
   useEffect(() => {
     switch (pick){
@@ -86,8 +89,8 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
   };
 
   const handleCopyToClipboard = () => {
-    const textToCopy = `${JSON.stringify(prizeList)}`;
-    navigator.clipboard.writeText(textToCopy).then(() => {
+    const textToCopy = JSON.stringify(nameWheelDataToBeCopied, null, 2);
+    navigator.clipboard.writeText(textToCopy).then(() => { 
       console.log('Copied to clipboard!');
     }).catch(err => {
       console.error('Failed to copy text: ', err);
@@ -180,9 +183,29 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
   }, [angle, prizeList]);
 
   return (
-    <React.Fragment>
-     
-      <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', height: '80vh' }}>
+    <div className="cont">
+      <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', height: '70vh' , marginTop:10}}>
+      <div style={{ marginTop: '-4rem' }}>
+          <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ backgroundColor: 'white', minWidth: 300, textAlign: "center", fontSize: 10 }}>
+            <div style={{ marginBottom: "-3.5rem", minWidth: 500 }}>
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Pick</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={pick}
+                  label="Pick"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={"Album of the Week"}>Album of the Week</MenuItem>
+                  <MenuItem value={"Runner Up Album of the Week"}>Runner Up Album of the Week</MenuItem>
+                  <MenuItem value={"Song of the Week"}>Song of the Week</MenuItem>
+                  <MenuItem value={"Runner Up Song of the Week"}>Runner Up Song of the Week</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+          </Box>
+        </div>
       <br></br>  <br></br>  <br></br> 
         <canvas
           ref={canvasRef}
@@ -202,19 +225,18 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
         />
           <br></br>  <br></br>
           
-          {checked ?  
-          (<Box display="flex" alignItems="center" color="lightgray">
-          <h1>{JSON.stringify(prizeList)}</h1>
-          <IconButton onClick={handleCopyToClipboard} sx={{ color: 'lightgray' }}>
-            <ContentCopyIcon />
-          </IconButton>
-        </Box>)  
-        : null} 
+          
        
     <div style={{display:"flex",alignItems:"left",color:"lightgray"}}>
-      <p style={{fontSize:20,marginBottom:7, marginRight:-5}}>DEV</p>
-      <ControlledCheckbox checked={checked} setChecked={setChecked}/>
+      <p style={{fontSize:20,marginBottom:7, marginRight:0, marginTop:-25}}>DEV</p>
+      <div style={{marginTop:-30}}> 
+      {/* <ControlledCheckbox checked={checked} setChecked={setChecked}/> */}
+      <IconButton onClick={handleCopyToClipboard} sx={{ color: 'lightgray' }}>
+            <ContentCopyIcon />
+          </IconButton>
+      </div>
       </div>  
+      
    
         <Dialog
           open={!!selectedPrize}
@@ -241,7 +263,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title }) => {
         </Dialog>
       </Box>
      
-    </React.Fragment>
+    </div>
   );
 };
 

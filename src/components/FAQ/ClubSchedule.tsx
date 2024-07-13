@@ -17,14 +17,9 @@ export default function MyClubSchedule() {
 
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">0X:10PM-0X:45PMish</TimelineOppositeContent>
-        <TimelineSeparator sx={{height:'125px'}}><TimelineDot /><TimelineConnector /></TimelineSeparator>
-        <TimelineContent>DISCUSSION
-          <ul>
-            <li style={{fontFamily:"Roboto-Regular", fontSize:12.5}}>Album/Song of the Week</li>
-            <li style={{fontFamily:"Roboto-Regular", fontSize:12.5}}>Runner Up Album/Song of the Week</li>
-
-            <li style={{fontFamily:"Roboto-Regular", fontSize:12.5, marginRight:90}}>Be ready to give a quick intro about your pick (you're fine to read from wikipedia)</li>
-            </ul></TimelineContent>
+        <TimelineSeparator ><TimelineDot /><TimelineConnector /></TimelineSeparator>
+        <TimelineContent>Discussion
+         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">0X:45PMish-0X:50PMish</TimelineOppositeContent>
