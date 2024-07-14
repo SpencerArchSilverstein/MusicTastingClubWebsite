@@ -12,7 +12,7 @@ export default function FAQComponent(){
     return (
         <React.Fragment>
             {isMobile ? (<br></br>) : null} 
-                <div className="faq">
+                <div className={isMobile ? "faq2" : "faq"}>
                     <h2 style={{fontSize:45, textAlign:"center", marginBottom:15}}>FAQ</h2>
                     <h2>Q: When/Where does the club meet?</h2>
                     <h3 className="answers">A: We meet every <b>[DAY]</b> at <b>[TIME]</b> in <b>[ROOM]</b>.</h3>
@@ -48,7 +48,7 @@ export default function FAQComponent(){
                 </div>
             <br /><br />
 
-        <div className="faq">
+        <div className={isMobile ? "faq2" : "faq"}>
             <h2 style={{fontSize:35, textAlign:"center", marginBottom:15}}>Schedule</h2>
             <br />
             <h2>Q: What does an average club meeting's schedule look like?</h2>

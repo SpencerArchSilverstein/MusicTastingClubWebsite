@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Tabs, Tab, Box, Collapse, IconButton, Table, TableBody, TableCell, TableContainer,
-  TableHead, TableRow, Paper, InputLabel, MenuItem, FormControl, Select, useMediaQuery
+  TableHead, TableRow, Paper, useMediaQuery
 } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -9,8 +9,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import picksData from './picksData2.json';
 import { useState, useEffect } from 'react';
 import '../SP/mission.css';
-import MemberPicksOrNotPicks from './PickChips';
-import { pickOrNotListFall24 } from './PickChipsData';
+import PastGenres from './PastGenres';
 import PrizeWheel from './NameWheel';
 import ThisWeeksPicks from '../SP/ThisWeeksPicks';
 import NameWheelData from './NameWheelData.json';
@@ -151,7 +150,7 @@ export default function WeeklyEntry() {
   return (
     <React.Fragment>
       {isMobile ? (<br></br>) : null}
-      <div className="cont">
+      <div className={isMobile ? "cont2" : "cont"}>
         <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>PREVIOUS PICKS</h3>
         <Box>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -170,9 +169,7 @@ export default function WeeklyEntry() {
                   </TableBody>
                 </Table>
               </TableContainer>
-              {index === 1 && (
-                <MemberPicksOrNotPicks pickOrNotList={pickOrNotListFall24} colors={colors}></MemberPicksOrNotPicks>
-              )}
+              {isMobile ? null : index === 1 ? <PastGenres /> : null}
             </CustomTabPanel>
           ))}
         </Box>

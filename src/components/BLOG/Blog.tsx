@@ -80,13 +80,19 @@ const Blog: React.FC = () => {
         setArticles(truncatedArticles);
     }, []);
 
+    useEffect(() => {
+        if(selectedBlog !== null){
+            window.scrollTo({top:0,behavior:'smooth'})
+        }
+    }, [selectedBlog])
+
     return (
         <React.Fragment>
         {selectedBlog == null ? 
         (
             <React.Fragment>
         {isMobile ? (<br></br>) : null} 
-        <div className={isMobile ? "blog-cont2" : "blog-cont"}>
+        <div className="blog-cont2">
             <h2 className="blog-titles">Club Articles</h2>
             <div className="blog-items-cont">
             {articles.map((article) => (
@@ -114,7 +120,7 @@ const Blog: React.FC = () => {
             </div>
         </div>
         {isMobile ? (<br></br>) : null} 
-        <div className={isMobile ? "blog-cont2" : "blog-cont"}>
+        <div className="blog-cont2">
             <h2 className="blog-titles">Club Reviews</h2>
             <div className="blog-items-cont">
             {reviews.map((review) => (
@@ -143,11 +149,11 @@ const Blog: React.FC = () => {
         </div>
         </React.Fragment>
          ):
-         ( <div className={isMobile ? "blog-cont2" : "blog-cont"}>
+         ( <> {isMobile ? (<br></br>) : null} <div className="blog-cont2">
          <IconButton onClick={() => {setSelectedBlog(null);}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></IconButton>
          <h1 style={{textAlign:"center",color:"gray"}}>{selectedBlog?.contTitle}</h1>
          <h5>{selectedBlog?.contContent}</h5>
-     </div>)
+     </div></>)
         
         }
        
