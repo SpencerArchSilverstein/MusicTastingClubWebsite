@@ -9,22 +9,57 @@ import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
 import { Grid, styled } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import data from '../WE/picksData2.json';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+const ItemMobile = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  paddingBottom: theme.spacing(2),
+  paddingTop: theme.spacing(2),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  flex:'wrap',
+}));
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(1),
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  paddingBottom: theme.spacing(10),
+  paddingTop: theme.spacing(10),
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  flex:'wrap',
 }));
+
 
 const Item2 = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(15.65),
+  padding: theme.spacing(2),
+  margin:0,
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  // flex:'wrap',
 }));
+
+
+
+const calendarStylesFull = {
+  transform: 'scale(1.5)',
+};
+
+const calendarStylesMobile2 = {
+  transform: 'scale(1)', // Adjust the scale as needed
+  // transformOrigin: 'top left',
+  alignItems:"center",
+  // marginLeft:7,
+  width:"100%"
+  
+};
 
 function getRandomNumber(min: number, max: number) {
   return Math.round(Math.random() * (max - min) + min);
@@ -70,6 +105,7 @@ export default function DateCalendarServerRequest() {
   const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15]);
   const [selectedDate, setSelectedDate] = React.useState<Dayjs | null>(initialValue);
   const currQ = data[2];
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   const fetchHighlightedDays = (date: Dayjs) => {
     const controller = new AbortController();
@@ -111,7 +147,7 @@ export default function DateCalendarServerRequest() {
 
 
   // QUARTER SIGNIFIERS
-  const startOfFQ24: Dayjs = dayjs('2024-09-23');
+  const startOfFQ24: Dayjs = dayjs('2024-09-21');
   const endOfFQ24:Dayjs = dayjs('2024-12-14');
   const startOfWQ25: Dayjs = dayjs('2025-01-06');
   const endOfWQ25:Dayjs = dayjs('2025-03-22');
@@ -147,55 +183,92 @@ export default function DateCalendarServerRequest() {
   };
 
   return (
-    <>
-    <Grid container spacing={2} columns={16}>
 
-        <Grid item xs={16}>
-            <Item>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DateCalendar
-                        defaultValue={initialValue}
-                        loading={isLoading}
-                        onMonthChange={handleMonthChange}
-                        onChange={handleDateChange}
-                        renderLoading={() => <DayCalendarSkeleton />}
-                        slots={{
-                          day: (dayProps) => (
-                            <ServerDay
-                              {...dayProps}
-                              FQ24Meetings={FQ24Meetings}
-                              emoji={
-                                selectedDate
-                                  ? data[whichQuarterIndex(selectedDate)]?.weeks[whichWeekIndex(dayProps.day)]
-                                    ?.weekActivityEmoji ?? ''
-                                  : ''
-                              }
+       <>
+          <Grid container spacing={2}>
+          <Grid item xs={12} md={8}>
+
+           <div>  {isMobile ? 
+           (<ItemMobile>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DateCalendar
+                                defaultValue={initialValue}
+                                loading={isLoading}
+                                onMonthChange={handleMonthChange}
+                                onChange={handleDateChange}
+                                renderLoading={() => <DayCalendarSkeleton />}
+                                slots={{
+                                  day: (dayProps) => (
+                                    <ServerDay
+                                      {...dayProps}
+                                      FQ24Meetings={FQ24Meetings}
+                                      emoji={
+                                        selectedDate
+                                          ? data[whichQuarterIndex(selectedDate)]?.weeks[whichWeekIndex(dayProps.day)]
+                                            ?.weekActivity.weekActivityEmoji ?? ''
+                                          : ''
+                                      }
+                                    />
+                                  ),
+                                }}
+                                sx={isMobile ? calendarStylesMobile2: calendarStylesFull}
                             />
-                          ),
-                        }}
-                        
-                    />
-                </LocalizationProvider>
-            </Item>
-        </Grid>
+                        </LocalizationProvider>
+                        </ItemMobile>) : (<Item>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DateCalendar
+                                defaultValue={initialValue}
+                                loading={isLoading}
+                                onMonthChange={handleMonthChange}
+                                onChange={handleDateChange}
+                                renderLoading={() => <DayCalendarSkeleton />}
+                                slots={{
+                                  day: (dayProps) => (
+                                    <ServerDay
+                                      {...dayProps}
+                                      FQ24Meetings={FQ24Meetings}
+                                      emoji={
+                                        selectedDate
+                                          ? data[whichQuarterIndex(selectedDate)]?.weeks[whichWeekIndex(dayProps.day)]
+                                            ?.weekActivity.weekActivityEmoji ?? ''
+                                          : ''
+                                      }
+                                    />
+                                  ),
+                                }}
+                                sx={isMobile ? calendarStylesMobile2: calendarStylesFull}
+                            />
+                        </LocalizationProvider>
+                        </Item>)}
 
-        
+           </div>
+           
+          </Grid>
+  <Grid item xs={12} md={4}>
+    <Item2>
+      <div style={{width:"100%"}}>
+        {selectedDate && (
+           <><h1 style={{color:"black", paddingBottom:10}}>{ data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityTitle ?? 'No Activity Found'}</h1>
+           <h2 style={{paddingBottom:20}}>{ data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityDetails ?? ''}</h2>
+           <h4 style={{paddingBottom:40}}>Hosted By { data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityHost ?? ''}</h4>
+          
+           </>)}
+               
+                
+                {/* <div>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div> */}
+                
+                
+                
+                </div>
 
-    </Grid>
-    <Grid item xs={8}>
-            <Item2>
-              <div style={{marginTop:-95}}>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div>
-             </Item2>
+                <Item2><b>KEY:</b> Trivia=🧠 | History=📻 | Beef Recap=🥩 | Music Edu=🎙️</Item2>
+                </Item2>
+            </Grid>
+            </Grid>
+                <Grid item xs={8}>
                 <br />
-                <Item><b>KEY:</b>Trivia=🧠 | History=📻 | Beef Recap=🥩 | Music Edu=🎙️</Item>
-                {selectedDate && (
-            <p>{ data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity ?? 'No Activity Found'}</p>
-          )}
-                
-            
-                
-        </Grid>
-    </>
-   
+        </Grid>  
+
+  </>
   );
 }

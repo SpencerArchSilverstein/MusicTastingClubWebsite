@@ -8,7 +8,7 @@
                 "weekId": 0,
                 "weekName": "WEEK 1",
                 "weekDate": "(01/11/24)",
-                "weekActivity":"N/A",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "weekActivityEmoji":"",
                 "picks": [
                     { "pickId": 0, "pickType": "Album of the Week", "songOrAlbumName": "SAWAYAMA", "artistName": "Rina Sawayama", "memberName": "Daniel" },
@@ -21,8 +21,7 @@
                 "weekId": 1,
                 "weekName": "WEEK 2",
                 "weekDate": "(01/18/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 4, "pickType": "Album of the Week", "songOrAlbumName": "Ys", "artistName": "Joanna Newsom", "memberName": "Lolo" },
                     { "pickId": 5, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "KiCk i", "artistName": "Arca", "memberName": "Alex" },
@@ -34,8 +33,7 @@
                 "weekId": 2,
                 "weekName": "WEEK 3",
                 "weekDate": "(01/25/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 8, "pickType": "Album of the Week", "songOrAlbumName": "Quebec", "artistName": "Ween", "memberName": "Ryan" },
                     { "pickId": 9, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Figure 8", "artistName": "Elliot Smith", "memberName": "Nathan" },
@@ -47,8 +45,7 @@
                 "weekId": 3,
                 "weekName": "WEEK 4",
                 "weekDate": "(02/01/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 12, "pickType": "Album of the Week", "songOrAlbumName": "SCARING THE HOES", "artistName": "JPEGMAFIA/Danny Brown", "memberName": "Archie" },
                     { "pickId": 13, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Antisocialites", "artistName": "Alvvays", "memberName": "Reed" },
@@ -60,8 +57,7 @@
                 "weekId": 4,
                 "weekName": "WEEK 5",
                 "weekDate": "(02/08/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 16, "pickType": "Album of the Week", "songOrAlbumName": "Hurry Up We're Dreaming", "artistName": "M83", "memberName": "Andrew" },
                     { "pickId": 17, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Moenie Kitchi", "artistName": "Gregori and the Hawk", "memberName": "Daniel" },
@@ -73,8 +69,7 @@
                 "weekId": 5,
                 "weekName": "WEEK 6",
                 "weekDate": "(02/15/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 20, "pickType": "Album of the Week", "songOrAlbumName": "Midnight Marauders", "artistName": "A Tribe Called Quest", "memberName": "Natalie" },
                     { "pickId": 21, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "The Forever Story", "artistName": "JID", "memberName": "Danny" },
@@ -86,8 +81,7 @@
                 "weekId": 6,
                 "weekName": "WEEK 7",
                 "weekDate": "(02/22/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 24, "pickType": "Album of the Week", "songOrAlbumName": "Purple Rain", "artistName": "Prince", "memberName": "Danny" },
                     { "pickId": 25, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Magnolia Electric Co", "artistName": "Songs:Ohia", "memberName": "Ryan" },
@@ -99,8 +93,7 @@
                 "weekId": 7,
                 "weekName": "WEEK 8",
                 "weekDate": "(02/29/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 28, "pickType": "Album of the Week", "songOrAlbumName": "Max&Match", "artistName": "Loona Odd Eye Circle", "memberName": "Reed" },
                     { "pickId": 29, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "IGOR", "artistName": "Tyler, The Creator", "memberName": "Archie" },
@@ -112,8 +105,7 @@
                 "weekId": 8,
                 "weekName": "WEEK 9",
                 "weekDate": "(03/07/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 32, "pickType": "Album of the Week", "songOrAlbumName": "Neo Wax Bloom", "artistName": "Iglooghost", "memberName": "Daniel" },
                     { "pickId": 33, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Bachata Rosa", "artistName": "Juan Luis Guerra 4.40", "memberName": "Danny" },
@@ -131,8 +123,7 @@
                 "weekId": 9,
                 "weekName": "WEEK 1",
                 "weekDate": "(04/01/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 36, "pickType": "Album of the Week", "songOrAlbumName": "SuperGood", "artistName": "Duckwrth", "memberName": "Danny" },
                     { "pickId": 37, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Violent Femmes", "artistName": "Violent Femmes", "memberName": "Ryan" },
@@ -144,8 +135,7 @@
                 "weekId": 10,
                 "weekName": "WEEK 2",
                 "weekDate": "(04/08/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 40, "pickType": "Album of the Week", "songOrAlbumName": "Everybody Else Is Doing It, So Why Can't We?", "artistName": "The Cranberries", "memberName": "Corey" },
                     { "pickId": 41, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Nurture", "artistName": "Porter Robinson", "memberName": "Aidan" },
@@ -157,8 +147,7 @@
                 "weekId": 11,
                 "weekName": "WEEK 3",
                 "weekDate": "(04/15/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 44, "pickType": "Album of the Week", "songOrAlbumName": "3 Feet High and Rising Studio Album", "artistName": "De La Soul", "memberName": "Ryan" },
                     { "pickId": 45, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "In the Court of the Crimson King", "artistName": "King Crimson", "memberName": "Natalie" },
@@ -170,8 +159,7 @@
                 "weekId": 12,
                 "weekName": "WEEK 4",
                 "weekDate": "(04/22/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 48, "pickType": "Album of the Week", "songOrAlbumName": "Feather River Canyon Blues", "artistName": "Pigeon Pit", "memberName": "Simon" },
                     { "pickId": 49, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "NOVA", "artistName": "RL Grime", "memberName": "Vicky + Marisabel" },
@@ -183,8 +171,7 @@
                 "weekId": 13,
                 "weekName": "WEEK 5",
                 "weekDate": "(04/29/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 52, "pickType": "Album of the Week", "songOrAlbumName": "Kaputt", "artistName": "Destroyer", "memberName": "Reed" },
                     { "pickId": 53, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Open Mouth, Open Heart", "artistName": "Destroy Boys", "memberName": "Corey" },
@@ -196,8 +183,7 @@
                 "weekId": 14,
                 "weekName": "WEEK 6",
                 "weekDate": "(05/06/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 56, "pickType": "Album of the Week", "songOrAlbumName": "Let's Get Out of This Country", "artistName": "Camera Obscura", "memberName": "Grace" },
                     { "pickId": 57, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Translucence", "artistName": "Poly Styrene", "memberName": "Ella" },
@@ -209,8 +195,7 @@
                 "weekId": 15,
                 "weekName": "WEEK 7",
                 "weekDate": "(05/13/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 60, "pickType": "Album of the Week", "songOrAlbumName": "Friends That Break Your Heart", "artistName": "James Blake", "memberName": "Susanna" },
                     { "pickId": 61, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Lavender Days", "artistName": "Caamp", "memberName": "Andrew" },
@@ -222,8 +207,7 @@
                 "weekId": 16,
                 "weekName": "WEEK 8",
                 "weekDate": "(05/20/24)",
-                "weekActivity":"N/A",
-                "weekActivityEmoji":"",
+                "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": 64, "pickType": "Album of the Week", "songOrAlbumName": "Zapper", "artistName": "NANORAY", "memberName": "Daniel" },
                     { "pickId": 65, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "No Pressure", "artistName": "Logic", "memberName": "Archie" },
@@ -241,9 +225,8 @@
             {
                 "weekId": 17,
                 "weekName": "WEEK 1",
-                "weekDate": "(09/XX/24)",
-                "weekActivity":"FQ24_W1_Activity_TRIVIA",
-                "weekActivityEmoji":"🧠",
+                "weekDate": "(09/23/24)",
+                "weekActivity": {"weekActivityEmoji":"🧠","weekActivityTitle":"TRIVIA","weekActivityDetails":"Get ready for some music related Jeopardy!","weekActivityHost":"Reed"},
                 "picks": [
                     { "pickId": 68, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": 69, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -254,9 +237,8 @@
             {
                 "weekId": 18,
                 "weekName": "WEEK 2",
-                "weekDate": "(10/XX/24)",
-                "weekActivity":"FQ24_W2_Activity_HISTORY",
-                "weekActivityEmoji":"📻",
+                "weekDate": "(10/01/24)",
+                "weekActivity": {"weekActivityEmoji":"📻","weekActivityTitle":"FQ24 W2 Activity HISTORY","weekActivityDetails":"Ever been curious about the origin of punk music? Come learn about it here!","weekActivityHost":"Andrew Barrett"},
                 "picks": [
                     { "pickId": 72, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": 73, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -267,9 +249,8 @@
             {
                 "weekId": 19,
                 "weekName": "WEEK 3",
-                "weekDate": "(10/XX/24)",
-                "weekActivity":"FQ24_W3_Activity_BEEF_RECAP",
-                "weekActivityEmoji":"🥩",
+                "weekDate": "(10/08/24)",
+                "weekActivity": {"weekActivityEmoji":"🥩","weekActivityTitle":"FQ24 W3 Activity BEEF RECAP","weekActivityDetails":"What's happening with the Drake/Kendrick beef? We're going over it all!","weekActivityHost":"Danny"},
                 "picks": [
                     { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -279,10 +260,9 @@
             },
             {
                 "weekId": 19,
-                "weekName": "WEEK 3",
-                "weekDate": "(10/XX/24)",
-                "weekActivity":"FQ24_W3_Activity_MUSIC_EDU",
-                "weekActivityEmoji":"🎙️",
+                "weekName": "WEEK 4",
+                "weekDate": "(10/15/24)",
+                "weekActivity": {"weekActivityEmoji":"🎙️","weekActivityTitle":"FQ24 W3 Activity MUSIC EDU","weekActivityDetails":"What makes that sound? Why does it sound like that? All that and more in some casual music education!","weekActivityHost":"Andrew Barret"},
                 "picks": [
                     { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -301,8 +281,7 @@
                 "weekId": -1,
                 "weekName": "WEEK 1",
                 "weekDate": "(01/XX/25)",
-                "weekActivity":"TESTWQ25",
-                "weekActivityEmoji":"",
+                "weekActivity":{"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": -1, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": -2, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -321,8 +300,7 @@
                 "weekId": -2,
                 "weekName": "WEEK 1",
                 "weekDate": "(04/XX/25)",
-                "weekActivity":"TESTSQ25",
-                "weekActivityEmoji":"",
+                "weekActivity":{"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
                     { "pickId": -5, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
                     { "pickId": -6, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
@@ -334,3 +312,5 @@
     }
 
 ]
+
+

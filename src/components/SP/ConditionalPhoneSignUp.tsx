@@ -17,7 +17,7 @@ export default function ConditionalPhoneSignUp(){
       </div>
 
       <div className="phone-su-inner-logo-cont">
-        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.gg/JzYa55p25m" target="_blank" rel="noopener noreferrer">
           <img src={discordImg} alt="Discord Join Logo" className="phone-su-logos" />
         </a>
         <p>Join Our Discord!</p>

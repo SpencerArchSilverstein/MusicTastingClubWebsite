@@ -49,12 +49,15 @@ export default function FAQComponent(){
             <br /><br />
 
         <div className={isMobile ? "faq2" : "faq"}>
-            <h2 style={{fontSize:35, textAlign:"center", marginBottom:15}}>Schedule</h2>
+            <h2 style={{fontSize:35, textAlign:"center", marginBottom:15}}>Club Schedule</h2>
             <br />
-            <h2>Q: What does an average club meeting's schedule look like?</h2>
             <MyClubSchedule />
+        </div>
+        <br /> <br />
+        <div className={isMobile ? "faq2" : "faq"}>
+            <h2 style={{fontSize:35, textAlign:"center", marginBottom:15}}>Calendar</h2>
+            <br />
             <DateCalendarServerRequest />
-
         </div>
         </React.Fragment>
     )
