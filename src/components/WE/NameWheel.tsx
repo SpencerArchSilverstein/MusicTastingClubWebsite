@@ -42,6 +42,10 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
   const [inputValue, setInputValue] = useState(options.join(', '));
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [checked, setChecked] = React.useState(false);
+  const [AotW, setAotW] = useState<string[]>(nameWheelDataToBeCopied["AotW"]);
+  const [RUAotW, setRUAotW] = useState<string[]>(nameWheelDataToBeCopied["RUAotW"]);
+  const [SotW, setSotW] = useState<string[]>(nameWheelDataToBeCopied["SotW"]);
+  const [RUSotW, setRUSotW] = useState<string[]>(nameWheelDataToBeCopied["RUSotW"]);
 
   const spin = () => {
     if (spinning) return;
@@ -82,25 +86,48 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
   const handleDialogClose = () => {
     setPrizeList(prevPrizeList => {
       const updatedPrizeList = prevPrizeList.filter(prize => prize !== selectedPrize);
+      if(title=="Album of the Week") setAotW(updatedPrizeList);
+      if(title=="Runner Up Album of the Week") setRUAotW(updatedPrizeList);
+      if(title=="Song of the Week") setSotW(updatedPrizeList);
+      if(title=="Runner Up Song of the Week") setRUSotW(updatedPrizeList);
       setInputValue(updatedPrizeList.join(', '));
       return updatedPrizeList;
     });
+    
     setSelectedPrize(null);
   };
 
   const handleCopyToClipboard = () => {
-    const textToCopy = JSON.stringify(nameWheelDataToBeCopied, null, 2);
+    const textToCopy = JSON.stringify({AotW,RUAotW,SotW,RUSotW}, null, 2);
     navigator.clipboard.writeText(textToCopy).then(() => { 
       console.log('Copied to clipboard!');
+      console.log(AotW);
+      console.log(RUAotW);
+      console.log(SotW);
+      console.log(RUSotW);
+      console.log(JSON.stringify({AotW,RUAotW,SotW,RUSotW}, null, 2))
     }).catch(err => {
       console.error('Failed to copy text: ', err);
     });
   };
 
   useEffect(() => {
-    setPrizeList(options);
-    setInputValue(options.join(', '));
-  }, [options]);
+    switch(title){
+      case "Album of the Week":
+        setPrizeList(AotW);
+        break;
+      case "Runner Up Album of the Week":
+        setPrizeList(RUAotW);
+        break;
+      case "Song of the Week":
+        setPrizeList(SotW);
+        break;
+      case "Runner Up Song of the Week":
+        setPrizeList(RUSotW);
+        break;
+    }
+    
+  }, [title]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -241,7 +268,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
         <Dialog
           open={!!selectedPrize}
           onClose={handleDialogClose}
-          maxWidth="xs"
+          maxWidth="md"
           fullWidth
           PaperProps={{
             sx: {
@@ -251,10 +278,11 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
             }
           }}
         >
-          <DialogTitle sx={{ textAlign: 'center', fontSize: '2rem' }}>CONGRATULATIONS!</DialogTitle>
-          <DialogContent sx={{ textAlign: 'center', fontSize: '1.5rem' }}>
-            {selectedPrize}
-          </DialogContent>
+          
+          <DialogTitle sx={{ textAlign: 'center', fontSize: '2rem' }}>{title} Pick Goes To:</DialogTitle>
+          <DialogContent sx={{ textAlign: 'center', fontSize: '2rem' }}>
+          🎉{selectedPrize}🎉
+           </DialogContent>
           <DialogActions sx={{ justifyContent: 'center' }}>
             <Button onClick={handleDialogClose} variant="contained" sx={{ backgroundColor: 'black', color: 'white' }}>
               Return to Wheel
@@ -268,3 +296,4 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
 };
 
 export default PrizeWheel;
+

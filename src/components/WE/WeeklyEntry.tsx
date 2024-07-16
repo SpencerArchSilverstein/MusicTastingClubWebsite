@@ -62,6 +62,8 @@ export default function WeeklyEntry() {
   const [wheelOptions, setWheelOptions] = useState<string[]>([]);
   const [openRow, setOpenRow] = useState<number | null>(null);
 
+
+
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
