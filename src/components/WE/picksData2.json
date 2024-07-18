@@ -9,12 +9,11 @@
                 "weekName": "WEEK 1",
                 "weekDate": "(01/11/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
-                "weekActivityEmoji":"",
                 "picks": [
-                    { "pickId": 0, "pickType": "Album of the Week", "songOrAlbumName": "SAWAYAMA", "artistName": "Rina Sawayama", "memberName": "Daniel" },
-                    { "pickId": 1, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 2, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 3, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 0, "pickType": "Album of the Week", "songOrAlbumName": "SAWAYAMA", "artistName": "Rina Sawayama", "memberName": "Daniel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e025b131d745dafd8666254fe96" },
+                    { "pickId": 1, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 2, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 3, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -23,10 +22,10 @@
                 "weekDate": "(01/18/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 4, "pickType": "Album of the Week", "songOrAlbumName": "Ys", "artistName": "Joanna Newsom", "memberName": "Lolo" },
-                    { "pickId": 5, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "KiCk i", "artistName": "Arca", "memberName": "Alex" },
-                    { "pickId": 6, "pickType": "Song of the Week", "songOrAlbumName": "Voy Pa'lla", "artistName": "Los Aventureros", "memberName": "Natalia" },
-                    { "pickId": 7, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Night Cruising (Live Version)", "artistName": "Fishmans", "memberName": "Ryan" }
+                    { "pickId": 4, "pickType": "Album of the Week", "songOrAlbumName": "Ys", "artistName": "Joanna Newsom", "memberName": "Lolo", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 5, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "KiCk i", "artistName": "Arca", "memberName": "Alex", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 6, "pickType": "Song of the Week", "songOrAlbumName": "Voy Pa'lla", "artistName": "Los Aventureros", "memberName": "Natalia", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e021ff7b4b86e204ed66b6765c1" },
+                    { "pickId": 7, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Night Cruising (Live Version)", "artistName": "Fishmans", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02b8b2f65e2dfa733439974801" }
                 ]
             },
             {
@@ -35,10 +34,10 @@
                 "weekDate": "(01/25/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 8, "pickType": "Album of the Week", "songOrAlbumName": "Quebec", "artistName": "Ween", "memberName": "Ryan" },
-                    { "pickId": 9, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Figure 8", "artistName": "Elliot Smith", "memberName": "Nathan" },
-                    { "pickId": 10, "pickType": "Song of the Week", "songOrAlbumName": "Garbage Pale Kids", "artistName": "JPEGMAFIA/Danny Brown", "memberName": "Archie" },
-                    { "pickId": 11, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Hero", "artistName": "Neu!", "memberName": "Vincent" }
+                    { "pickId": 8, "pickType": "Album of the Week", "songOrAlbumName": "Quebec", "artistName": "Ween", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e024df4aa40b54416c3de8d5bf6" },
+                    { "pickId": 9, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Figure 8", "artistName": "Elliot Smith", "memberName": "Nathan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02169a2393509223c26e4eedc5" },
+                    { "pickId": 10, "pickType": "Song of the Week", "songOrAlbumName": "Garbage Pale Kids", "artistName": "JPEGMAFIA/Danny Brown", "memberName": "Archie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c" },
+                    { "pickId": 11, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Hero", "artistName": "Neu!", "memberName": "Vincent", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -47,10 +46,10 @@
                 "weekDate": "(02/01/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 12, "pickType": "Album of the Week", "songOrAlbumName": "SCARING THE HOES", "artistName": "JPEGMAFIA/Danny Brown", "memberName": "Archie" },
-                    { "pickId": 13, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Antisocialites", "artistName": "Alvvays", "memberName": "Reed" },
-                    { "pickId": 14, "pickType": "Song of the Week", "songOrAlbumName": "Rubber Ball (Space Kitchen)", "artistName": "Underworld", "memberName": "Daniel" },
-                    { "pickId": 15, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Bodys", "artistName": "Car Seat Headrest", "memberName": "Nathan" }
+                    { "pickId": 12, "pickType": "Album of the Week", "songOrAlbumName": "SCARING THE HOES", "artistName": "JPEGMAFIA/Danny Brown", "memberName": "Archie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c" },
+                    { "pickId": 13, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Antisocialites", "artistName": "Alvvays", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0291390d24abb65f6fae0323f0" },
+                    { "pickId": 14, "pickType": "Song of the Week", "songOrAlbumName": "Rubber Ball (Space Kitchen)", "artistName": "Underworld", "memberName": "Daniel", "songOrAlbumArt":"" },
+                    { "pickId": 15, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Bodys", "artistName": "Car Seat Headrest", "memberName": "Nathan", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -59,10 +58,10 @@
                 "weekDate": "(02/08/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 16, "pickType": "Album of the Week", "songOrAlbumName": "Hurry Up We're Dreaming", "artistName": "M83", "memberName": "Andrew" },
-                    { "pickId": 17, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Moenie Kitchi", "artistName": "Gregori and the Hawk", "memberName": "Daniel" },
-                    { "pickId": 18, "pickType": "Song of the Week", "songOrAlbumName": "UMI Says", "artistName": "Mos Def", "memberName": "Reed" },
-                    { "pickId": 19, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Texas Flood", "artistName": "Stevie Ray Vaughan", "memberName": "Natalie" }
+                    { "pickId": 16, "pickType": "Album of the Week", "songOrAlbumName": "Hurry Up We're Dreaming", "artistName": "M83", "memberName": "Andrew", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02fff2cb485c36a6d8f639bdba" },
+                    { "pickId": 17, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Moenie Kitchi", "artistName": "Gregori and the Hawk", "memberName": "Daniel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0228e2b529cb08bfe5a00035c3" },
+                    { "pickId": 18, "pickType": "Song of the Week", "songOrAlbumName": "UMI Says", "artistName": "Mos Def", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0289b56f56323925d57b38944d"},
+                    { "pickId": 19, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Texas Flood", "artistName": "Stevie Ray Vaughan", "memberName": "Natalie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02f7143c00741b94bb62025340" }
                 ]
             },
             {
@@ -71,10 +70,10 @@
                 "weekDate": "(02/15/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 20, "pickType": "Album of the Week", "songOrAlbumName": "Midnight Marauders", "artistName": "A Tribe Called Quest", "memberName": "Natalie" },
-                    { "pickId": 21, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "The Forever Story", "artistName": "JID", "memberName": "Danny" },
-                    { "pickId": 22, "pickType": "Song of the Week", "songOrAlbumName": "Demolisher", "artistName": "Slaughter To Prevail", "memberName": "Andrew" },
-                    { "pickId": 23, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Dance Now", "artistName": "DJ Sabrina the Teenage DJ", "memberName": "Reed" }
+                    { "pickId": 20, "pickType": "Album of the Week", "songOrAlbumName": "Midnight Marauders", "artistName": "A Tribe Called Quest", "memberName": "Natalie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02f306af1dae08f81f9d6f1f9f" },
+                    { "pickId": 21, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "The Forever Story", "artistName": "JID", "memberName": "Danny", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02cae6e44dcc84e2035c3ad092" },
+                    { "pickId": 22, "pickType": "Song of the Week", "songOrAlbumName": "Demolisher", "artistName": "Slaughter To Prevail", "memberName": "Andrew", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e027351717000b6749d905841c0" },
+                    { "pickId": 23, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Dance Now", "artistName": "DJ Sabrina the Teenage DJ", "memberName": "Reed", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -83,10 +82,10 @@
                 "weekDate": "(02/22/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 24, "pickType": "Album of the Week", "songOrAlbumName": "Purple Rain", "artistName": "Prince", "memberName": "Danny" },
-                    { "pickId": 25, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Magnolia Electric Co", "artistName": "Songs:Ohia", "memberName": "Ryan" },
-                    { "pickId": 26, "pickType": "Song of the Week", "songOrAlbumName": "Some Are Lakes", "artistName": "Land of Talk", "memberName": "Natalie" },
-                    { "pickId": 27, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 24, "pickType": "Album of the Week", "songOrAlbumName": "Purple Rain", "artistName": "Prince", "memberName": "Danny", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e028a2ce3f148f57584269c3782" },
+                    { "pickId": 25, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Magnolia Electric Co", "artistName": "Songs:Ohia", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0289b54a2385458cbe68bc35c6" },
+                    { "pickId": 26, "pickType": "Song of the Week", "songOrAlbumName": "Some Are Lakes", "artistName": "Land of Talk", "memberName": "Natalie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02b594a30ddd7eb3cb5f9ec1e0" },
+                    { "pickId": 27, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -95,10 +94,10 @@
                 "weekDate": "(02/29/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 28, "pickType": "Album of the Week", "songOrAlbumName": "Max&Match", "artistName": "Loona Odd Eye Circle", "memberName": "Reed" },
-                    { "pickId": 29, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "IGOR", "artistName": "Tyler, The Creator", "memberName": "Archie" },
-                    { "pickId": 30, "pickType": "Song of the Week", "songOrAlbumName": "La Luna y El Torro", "artistName": "El Matador", "memberName": "Danny" },
-                    { "pickId": 31, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 28, "pickType": "Album of the Week", "songOrAlbumName": "Max&Match", "artistName": "Loona Odd Eye Circle", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02fb3c690920c69107439c2866" },
+                    { "pickId": 29, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "IGOR", "artistName": "Tyler, The Creator", "memberName": "Archie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e027005885df706891a3c182a57" },
+                    { "pickId": 30, "pickType": "Song of the Week", "songOrAlbumName": "La Luna y El Torro", "artistName": "El Matador", "memberName": "Danny", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 31, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -107,10 +106,10 @@
                 "weekDate": "(03/07/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 32, "pickType": "Album of the Week", "songOrAlbumName": "Neo Wax Bloom", "artistName": "Iglooghost", "memberName": "Daniel" },
-                    { "pickId": 33, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Bachata Rosa", "artistName": "Juan Luis Guerra 4.40", "memberName": "Danny" },
-                    { "pickId": 34, "pickType": "Song of the Week", "songOrAlbumName": "Mac Arthur Park Suite", "artistName": "Donna Summer", "memberName": "Ryan" },
-                    { "pickId": 35, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Next Hype", "artistName": "TempaT", "memberName": "Reed" }
+                    { "pickId": 32, "pickType": "Album of the Week", "songOrAlbumName": "Neo Wax Bloom", "artistName": "Iglooghost", "memberName": "Daniel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e020c67ab993d8e939e97cf7a3f" },
+                    { "pickId": 33, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Bachata Rosa", "artistName": "Juan Luis Guerra 4.40", "memberName": "Danny", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02fabe96fd440a50e9288111c2" },
+                    { "pickId": 34, "pickType": "Song of the Week", "songOrAlbumName": "Mac Arthur Park Suite", "artistName": "Donna Summer", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e020c3a44d76807bef665eacfa3"},
+                    { "pickId": 35, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Next Hype", "artistName": "TempaT", "memberName": "Reed", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             }
         ]
@@ -125,10 +124,10 @@
                 "weekDate": "(04/01/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 36, "pickType": "Album of the Week", "songOrAlbumName": "SuperGood", "artistName": "Duckwrth", "memberName": "Danny" },
-                    { "pickId": 37, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Violent Femmes", "artistName": "Violent Femmes", "memberName": "Ryan" },
-                    { "pickId": 38, "pickType": "Song of the Week", "songOrAlbumName": "When You Were Mine", "artistName": "Joy Crookes", "memberName": "Susanna" },
-                    { "pickId": 39, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Hide And Seek", "artistName": "Imogen Heap", "memberName": "Andrew" }
+                    { "pickId": 36, "pickType": "Album of the Week", "songOrAlbumName": "SuperGood", "artistName": "Duckwrth", "memberName": "Danny", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e022e5a021780f5056724a5b6af" },
+                    { "pickId": 37, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Violent Femmes", "artistName": "Violent Femmes", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0254096a7f898de0233d76f626" },
+                    { "pickId": 38, "pickType": "Song of the Week", "songOrAlbumName": "When You Were Mine", "artistName": "Joy Crookes", "memberName": "Susanna", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02d025dca572f4485288e12d2c" },
+                    { "pickId": 39, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Hide And Seek", "artistName": "Imogen Heap", "memberName": "Andrew", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -137,10 +136,10 @@
                 "weekDate": "(04/08/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 40, "pickType": "Album of the Week", "songOrAlbumName": "Everybody Else Is Doing It, So Why Can't We?", "artistName": "The Cranberries", "memberName": "Corey" },
-                    { "pickId": 41, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Nurture", "artistName": "Porter Robinson", "memberName": "Aidan" },
-                    { "pickId": 42, "pickType": "Song of the Week", "songOrAlbumName": "Woman", "artistName": "Free", "memberName": "Natalie" },
-                    { "pickId": 43, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "The End", "artistName": "The Doors", "memberName": "Grace" }
+                    { "pickId": 40, "pickType": "Album of the Week", "songOrAlbumName": "Everybody Else Is Doing It, So Why Can't We?", "artistName": "The Cranberries", "memberName": "Corey", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02f6325f361d7803ad0d908451" },
+                    { "pickId": 41, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Nurture", "artistName": "Porter Robinson", "memberName": "Aidan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e027d6ac8b4a84ad4b342050d87" },
+                    { "pickId": 42, "pickType": "Song of the Week", "songOrAlbumName": "Woman", "artistName": "Free", "memberName": "Natalie", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 43, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "The End", "artistName": "The Doors", "memberName": "Grace", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -149,10 +148,10 @@
                 "weekDate": "(04/15/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 44, "pickType": "Album of the Week", "songOrAlbumName": "3 Feet High and Rising Studio Album", "artistName": "De La Soul", "memberName": "Ryan" },
-                    { "pickId": 45, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "In the Court of the Crimson King", "artistName": "King Crimson", "memberName": "Natalie" },
-                    { "pickId": 46, "pickType": "Song of the Week", "songOrAlbumName": "Dead in the Water", "artistName": "Ellie Goulding", "memberName": "Andrew" },
-                    { "pickId": 47, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Restless Song", "artistName": "Shadow Community", "memberName": "Reed" }
+                    { "pickId": 44, "pickType": "Album of the Week", "songOrAlbumName": "3 Feet High and Rising Studio Album", "artistName": "De La Soul", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02fa8d314f6f91e81889335dfc" },
+                    { "pickId": 45, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "In the Court of the Crimson King", "artistName": "King Crimson", "memberName": "Natalie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02da7b326bd7ffa7b6b95b0660" },
+                    { "pickId": 46, "pickType": "Song of the Week", "songOrAlbumName": "Dead in the Water", "artistName": "Ellie Goulding", "memberName": "Andrew", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 47, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Restless Song", "artistName": "Shadow Community", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e020d2abeb204efa70a0840e456" }
                 ]
             },
             {
@@ -161,10 +160,10 @@
                 "weekDate": "(04/22/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 48, "pickType": "Album of the Week", "songOrAlbumName": "Feather River Canyon Blues", "artistName": "Pigeon Pit", "memberName": "Simon" },
-                    { "pickId": 49, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "NOVA", "artistName": "RL Grime", "memberName": "Vicky + Marisabel" },
-                    { "pickId": 50, "pickType": "Song of the Week", "songOrAlbumName": "Northern Downpour", "artistName": "Panic! At The Disco", "memberName": "Rogelio" },
-                    { "pickId": 51, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "The Hissing of Summer Lawn", "artistName": "Joni Mitchell", "memberName": "Ella" }
+                    { "pickId": 48, "pickType": "Album of the Week", "songOrAlbumName": "Feather River Canyon Blues", "artistName": "Pigeon Pit", "memberName": "Simon", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02376908ef3571b2a0b13e446b" },
+                    { "pickId": 49, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "NOVA", "artistName": "RL Grime", "memberName": "Vicky + Marisabel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02798f315e011d4ada702ce9bb" },
+                    { "pickId": 50, "pickType": "Song of the Week", "songOrAlbumName": "Northern Downpour", "artistName": "Panic! At The Disco", "memberName": "Rogelio", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 51, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "The Hissing of Summer Lawn", "artistName": "Joni Mitchell", "memberName": "Ella", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e020153ab9024b8545d6acdc999" }
                 ]
             },
             {
@@ -173,10 +172,10 @@
                 "weekDate": "(04/29/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 52, "pickType": "Album of the Week", "songOrAlbumName": "Kaputt", "artistName": "Destroyer", "memberName": "Reed" },
-                    { "pickId": 53, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Open Mouth, Open Heart", "artistName": "Destroy Boys", "memberName": "Corey" },
-                    { "pickId": 54, "pickType": "Song of the Week", "songOrAlbumName": "Fronteir Psychiatrist", "artistName": "The Avalanches", "memberName": "Ryan" },
-                    { "pickId": 55, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "A Quick One While He's Away", "artistName": "The Who", "memberName": "Grace" }
+                    { "pickId": 52, "pickType": "Album of the Week", "songOrAlbumName": "Kaputt", "artistName": "Destroyer", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e026fd7ec50eeda2f6820f1f873" },
+                    { "pickId": 53, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Open Mouth, Open Heart", "artistName": "Destroy Boys", "memberName": "Corey", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02d27eb8a754a19182e40c0757" },
+                    { "pickId": 54, "pickType": "Song of the Week", "songOrAlbumName": "Fronteir Psychiatrist", "artistName": "The Avalanches", "memberName": "Ryan", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e024cc65c5ce55234c548a79d9d" },
+                    { "pickId": 55, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "A Quick One While He's Away", "artistName": "The Who", "memberName": "Grace", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -185,10 +184,10 @@
                 "weekDate": "(05/06/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 56, "pickType": "Album of the Week", "songOrAlbumName": "Let's Get Out of This Country", "artistName": "Camera Obscura", "memberName": "Grace" },
-                    { "pickId": 57, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Translucence", "artistName": "Poly Styrene", "memberName": "Ella" },
-                    { "pickId": 58, "pickType": "Song of the Week", "songOrAlbumName": "Out Like a Light", "artistName": "Ricky Montgomery & The Honeysticks", "memberName": "Aidan" },
-                    { "pickId": 59, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "PROM/KING", "artistName": "Saba", "memberName": "Danny" }
+                    { "pickId": 56, "pickType": "Album of the Week", "songOrAlbumName": "Let's Get Out of This Country", "artistName": "Camera Obscura", "memberName": "Grace", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637" },
+                    { "pickId": 57, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Translucence", "artistName": "Poly Styrene", "memberName": "Ella", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e023c5a0d07041ceec4295f8634" },
+                    { "pickId": 58, "pickType": "Song of the Week", "songOrAlbumName": "Out Like a Light", "artistName": "Ricky Montgomery & The Honeysticks", "memberName": "Aidan", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 59, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "PROM/KING", "artistName": "Saba", "memberName": "Danny", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             },
             {
@@ -197,10 +196,10 @@
                 "weekDate": "(05/13/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 60, "pickType": "Album of the Week", "songOrAlbumName": "Friends That Break Your Heart", "artistName": "James Blake", "memberName": "Susanna" },
-                    { "pickId": 61, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Lavender Days", "artistName": "Caamp", "memberName": "Andrew" },
-                    { "pickId": 62, "pickType": "Song of the Week", "songOrAlbumName": "American Lawn", "artistName": "Blake Rouse", "memberName": "Simon" },
-                    { "pickId": 63, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Jackie", "artistName": "Yves Tumor", "memberName": "Daniel" }
+                    { "pickId": 60, "pickType": "Album of the Week", "songOrAlbumName": "Friends That Break Your Heart", "artistName": "James Blake", "memberName": "Susanna", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e0238d030048ec770b15633dbc1" },
+                    { "pickId": 61, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "Lavender Days", "artistName": "Caamp", "memberName": "Andrew", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02d67b81ebdeb6f84cc1f248bb" },
+                    { "pickId": 62, "pickType": "Song of the Week", "songOrAlbumName": "American Lawn", "artistName": "Blake Rouse", "memberName": "Simon", "songOrAlbumArt":"NEED TO FIND" },
+                    { "pickId": 63, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Jackie", "artistName": "Yves Tumor", "memberName": "Daniel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02a76d0e5fa05469cff1622641" }
                 ]
             },
             {
@@ -209,10 +208,10 @@
                 "weekDate": "(05/20/24)",
                 "weekActivity": {"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": 64, "pickType": "Album of the Week", "songOrAlbumName": "Zapper", "artistName": "NANORAY", "memberName": "Daniel" },
-                    { "pickId": 65, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "No Pressure", "artistName": "Logic", "memberName": "Archie" },
-                    { "pickId": 66, "pickType": "Song of the Week", "songOrAlbumName": "Graphic Bleed Outs", "artistName": "Quelle Chris and Chris Keys", "memberName": "Reed" },
-                    { "pickId": 67, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Ondulé", "artistName": "Mathieu Boogaerts", "memberName": "Natalie" }
+                    { "pickId": 64, "pickType": "Album of the Week", "songOrAlbumName": "Zapper", "artistName": "NANORAY", "memberName": "Daniel", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02dfc1bd112d040ea2d18e8a32" },
+                    { "pickId": 65, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "No Pressure", "artistName": "Logic", "memberName": "Archie", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e021c76e29153f29cc1e1b2b434" },
+                    { "pickId": 66, "pickType": "Song of the Week", "songOrAlbumName": "Graphic Bleed Outs", "artistName": "Quelle Chris and Chris Keys", "memberName": "Reed", "songOrAlbumArt":"https://i.scdn.co/image/ab67616d00001e02b897ecace90f2f389a5de388" },
+                    { "pickId": 67, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "Ondulé", "artistName": "Mathieu Boogaerts", "memberName": "Natalie", "songOrAlbumArt":"NEED TO FIND" }
                 ]
             }
         ]
@@ -228,10 +227,10 @@
                 "weekDate": "(09/23/24)",
                 "weekActivity": {"weekActivityEmoji":"🧠","weekActivityTitle":"TRIVIA","weekActivityDetails":"Get ready for some music related Jeopardy!","weekActivityHost":"Reed"},
                 "picks": [
-                    { "pickId": 68, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 69, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 70, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 71, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 68, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 69, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 70, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 71, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -240,10 +239,10 @@
                 "weekDate": "(10/01/24)",
                 "weekActivity": {"weekActivityEmoji":"📻","weekActivityTitle":"FQ24 W2 Activity HISTORY","weekActivityDetails":"Ever been curious about the origin of punk music? Come learn about it here!","weekActivityHost":"Andrew Barrett"},
                 "picks": [
-                    { "pickId": 72, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 73, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 74, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 75, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 72, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 73, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 74, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 75, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -252,10 +251,10 @@
                 "weekDate": "(10/08/24)",
                 "weekActivity": {"weekActivityEmoji":"🥩","weekActivityTitle":"FQ24 W3 Activity BEEF RECAP","weekActivityDetails":"What's happening with the Drake/Kendrick beef? We're going over it all!","weekActivityHost":"Danny"},
                 "picks": [
-                    { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 78, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 79, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 78, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 79, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             },
             {
@@ -264,10 +263,10 @@
                 "weekDate": "(10/15/24)",
                 "weekActivity": {"weekActivityEmoji":"🎙️","weekActivityTitle":"FQ24 W3 Activity MUSIC EDU","weekActivityDetails":"What makes that sound? Why does it sound like that? All that and more in some casual music education!","weekActivityHost":"Andrew Barret"},
                 "picks": [
-                    { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 78, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": 79, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": 76, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 77, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 78, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": 79, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             }
         ]
@@ -283,10 +282,10 @@
                 "weekDate": "(01/XX/25)",
                 "weekActivity":{"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": -1, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -2, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -3, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -4, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": -1, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -2, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -3, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -4, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             }
         ]
@@ -302,15 +301,12 @@
                 "weekDate": "(04/XX/25)",
                 "weekActivity":{"weekActivityEmoji":"","weekActivityTitle":"","weekActivityDetails":"","weekActivityHost":""},
                 "picks": [
-                    { "pickId": -5, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -6, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -7, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" },
-                    { "pickId": -8, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A" }
+                    { "pickId": -5, "pickType": "Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -6, "pickType": "Runner Up Album of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -7, "pickType": "Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" },
+                    { "pickId": -8, "pickType": "Runner Up Song of the Week", "songOrAlbumName": "N/A", "artistName": "N/A", "memberName": "N/A", "songOrAlbumArt":"" }
                 ]
             }
         ]
     }
-
 ]
-
-
