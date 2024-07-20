@@ -1,6 +1,6 @@
 import React from "react";
-import googleFormImg from "../../imgs/googleformlogo.png";
-import discordImg from "../../imgs/discordlogo.png";
+import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
+import discordImg from "../../imgs/companyLogos/discordlogo.png";
 import './phone-only-salespitch.css';
 import './mission.css';
 

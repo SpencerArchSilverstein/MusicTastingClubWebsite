@@ -1,6 +1,7 @@
 import React from 'react';
-import './ImageScroller.css';
-import albumArtLinks from './components/WE/picksData2.json';
+import './ImageScroller2.css';
+import albumArtLinks from '../../components/WE/picksData2.json';
+//Q1W2AotW Q1W3RUSotW Q1W9RUSotW Q2W2SotW
 interface Pick {
     pickId: number;
     pickType: string;
@@ -30,59 +31,46 @@ interface Quarter {
     weeks: Week[];
 }
 
-
 const getSongOrAlbumArtComponents = () => {
     const imageComponents: JSX.Element[] = [];
 
     albumArtLinks.forEach(quarter => {
         quarter.weeks.forEach(week => {
             week.picks.forEach(pick => {
-                if (pick.songOrAlbumArt && pick.songOrAlbumArt.toString() != "NEED TO FIND") {
+                if (pick.songOrAlbumArt && pick.songOrAlbumArt.toString() !== "NEED TO FIND" && pick.songOrAlbumArt.toString() !== "MANUAL") {
                     imageComponents.push(
                         <img
                             key={`quarter-${quarter.quarterId}-week-${week.weekId}-pick-${pick.pickId}`}
                             src={pick.songOrAlbumArt}
                             alt={pick.songOrAlbumName}
-                            style={{ width: '100px', height: '100px', margin: '10px' }}
+                            style={{ width: '200px', height: '200px', margin: '10px' }}
                         />
                     );
                 }
             });
         });
     });
-
     return imageComponents;
 };
 
 function ImageScroller() {
     const images = getSongOrAlbumArtComponents();
-    
-    const imagesPerRow = 6;
-    const numLines = 7;
-    const totalImages = imagesPerRow * numLines;
-    const extendedImages = [...images, ...images];
-    const lines = [];
-
-    for (let i = 0; i < numLines; i++) {
-        const offset = i * imagesPerRow;
-        const offsetImages = extendedImages.slice(offset, offset + totalImages);
-        lines.push(offsetImages);
-    }
-
     return (
-        <div className="logos">
-            {lines.map((lineImages, lineIndex) => (
-                <div className="logos-slide" key={lineIndex}>
-                    {lineImages.map((image, imgIndex) => (
-                        <div key={`line-${lineIndex}-${imgIndex}`} className="logo2">
-                            {image}
-                        </div>
-                    ))}
-                </div>
-            ))}
+        <div className="slider">
+            <div className="slide-track">
+                {images.map((img, ind) => (
+                    <div className="slide" key={ind}>
+                        {img}
+                    </div>
+                ))}
+                    {images.map((img, ind) => (
+                    <div className="slide" key={ind}>
+                        {img}
+                    </div>
+                ))}
+            </div>
         </div>
-    );
+    )
 }
 
 export default ImageScroller;
-

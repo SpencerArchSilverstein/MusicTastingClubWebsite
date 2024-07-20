@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import SalesPitch from './components/SP/salespitch';
-import ImageScroller from './ImageScroller';
+import ImageScroller from './imgs/IS/ImageScroller';
+// import ImageScroller2 from './imgs/IS/ImageScroller2';
 import FAQComponent from './components/FAQ/FAQComponent';
 import ExecBoard from './components/ABOUT/ExecBoard';
 import WeeklyEntry from './components/WE/WeeklyEntry';
@@ -49,6 +50,7 @@ function App() {
 
 <div className="image-scroller">
 <ImageScroller></ImageScroller>
+{/* <ImageScroller2></ImageScroller2> */}
 </div>
 <h5 className="header2">NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP</h5>
 

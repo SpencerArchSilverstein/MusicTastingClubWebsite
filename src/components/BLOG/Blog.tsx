@@ -149,13 +149,18 @@ const Blog: React.FC = () => {
         </div>
         </React.Fragment>
          ):
-         ( <> {isMobile ? (<br></br>) : null} <div className="blog-cont2">
-         <IconButton onClick={() => {setSelectedBlog(null);}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></IconButton>
-         <h1 style={{textAlign:"center",color:"gray"}}>{selectedBlog?.contTitle}</h1>
-         <h5>{selectedBlog?.contContent}</h5>
-     </div></>)
-        
-        }
+         <>
+        {isMobile ? <br /> : null}
+        <div className="blog-cont2">
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                <IconButton onClick={() => { setSelectedBlog(null); }} style={{ position: "absolute", left: 0 }}>
+                    <ArrowBackIosNewIcon />
+                </IconButton>
+                <h1 style={{ textAlign: "center", color: "gray" }}>{selectedBlog?.contTitle}</h1>
+            </div>
+            <h5>{selectedBlog?.contContent}</h5>
+        </div>
+    </>}
        
          
         </React.Fragment>

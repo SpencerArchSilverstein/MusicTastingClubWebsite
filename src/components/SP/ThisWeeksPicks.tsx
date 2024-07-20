@@ -19,10 +19,10 @@ function createData2(
   }
 
 const rows = [
-    createData2(-1,"Album of the Week","songOrAlbumName","ArtistName","MemberName"),
-    createData2(-2,"Runner Up Album of the Week", "songOrAlbumName", "ArtistName","MemberName"),
-    createData2(-3,"Song of the Week","SongmName","ArtistName","MemberName"),
-    createData2(-4,"Runner Up Song of the Week", "SongName", "ArtistName","MemberName"),
+    createData2(-1,"Album of the Week","albumName","ArtistName","MemberName"),
+    createData2(-2,"Runner Up Album of the Week", "albumName", "ArtistName","MemberName"),
+    createData2(-3,"Song of the Week","songName","ArtistName","MemberName"),
+    createData2(-4,"Runner Up Song of the Week", "songName", "ArtistName","MemberName"),
 ];
 
 export default function ThisWeeksPicks() {

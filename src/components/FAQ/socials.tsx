@@ -1,12 +1,12 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import './socials.css';
-import spotifyImg from "../../imgs/spotlogo.png";
-import instaImg from "../../imgs/instalogo.png";
-import appMusImg from "../../imgs/applemusiclogo.png";
-import discordImg from "../../imgs/discordlogo.png";
-import googleFormImg from "../../imgs/googleformlogo.png";
-import twitterImg from "../../imgs/twitterlogo.png";
+import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
+import instaImg from "../../imgs/companyLogos/instalogo.png";
+import appMusImg from "../../imgs/companyLogos/applemusiclogo.png";
+import discordImg from "../../imgs/companyLogos/discordlogo.png";
+import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
+import twitterImg from "../../imgs/companyLogos/twitterlogo.png";
 // import listservImg from "../../imgs/listservimg.png"; // Commented out since it's not used
 
 function Socials() {

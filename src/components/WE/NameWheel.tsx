@@ -12,7 +12,7 @@ interface PrizeWheelProps {
 }
 
 const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange,nameWheelDataToBeCopied}) => {
-  const [pick, setPick] = React.useState('');
+  const [pick, setPick] = React.useState('Album of the Week');
 
   const handleChange = (event: SelectChangeEvent) => {
     setPick(event.target.value as string);
@@ -41,7 +41,6 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
   const [prizeList, setPrizeList] = useState(options);
   const [inputValue, setInputValue] = useState(options.join(', '));
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [checked, setChecked] = React.useState(false);
   const [AotW, setAotW] = useState<string[]>(nameWheelDataToBeCopied["AotW"]);
   const [RUAotW, setRUAotW] = useState<string[]>(nameWheelDataToBeCopied["RUAotW"]);
   const [SotW, setSotW] = useState<string[]>(nameWheelDataToBeCopied["SotW"]);
@@ -72,7 +71,6 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
         setSelectedPrize(prizeList[prizeIndex]);
       }
     };
-
     requestAnimationFrame(animate);
   };
 
@@ -93,9 +91,9 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
       setInputValue(updatedPrizeList.join(', '));
       return updatedPrizeList;
     });
-    
     setSelectedPrize(null);
   };
+  
 
   const handleCopyToClipboard = () => {
     const textToCopy = JSON.stringify({AotW,RUAotW,SotW,RUSotW}, null, 2);
@@ -115,19 +113,25 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
     switch(title){
       case "Album of the Week":
         setPrizeList(AotW);
+        setInputValue(AotW.join(', '));
         break;
       case "Runner Up Album of the Week":
         setPrizeList(RUAotW);
+        setInputValue(RUAotW.join(', '));
         break;
       case "Song of the Week":
         setPrizeList(SotW);
+        setInputValue(SotW.join(', '));
         break;
       case "Runner Up Song of the Week":
         setPrizeList(RUSotW);
+        setInputValue(RUSotW.join(', '));
         break;
+      default:
+        setInputValue("Album of the Week");
     }
-    
-  }, [title]);
+  }, [title, AotW, RUAotW, SotW, RUSotW]);
+  
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -250,17 +254,14 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({ options, title,handlePickChange
           value={inputValue}
           sx={{ width: 500, marginTop: 3 }}
         />
-          <br></br>  <br></br>
-          
-          
-       
+        <br /><br />
     <div style={{display:"flex",alignItems:"left",color:"lightgray"}}>
       <p style={{fontSize:20,marginBottom:7, marginRight:0, marginTop:-25}}>DEV</p>
       <div style={{marginTop:-30}}> 
       {/* <ControlledCheckbox checked={checked} setChecked={setChecked}/> */}
       <IconButton onClick={handleCopyToClipboard} sx={{ color: 'lightgray' }}>
             <ContentCopyIcon />
-          </IconButton>
+      </IconButton>
       </div>
       </div>  
       
