@@ -49,7 +49,7 @@ function App() {
         </div>
         <h5 className="header2">NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP</h5>
 
-  {isMobile ? null : (
+    {isMobile ? null : (
           <div className="nav-bar-cont">
             <p className="nav-item" onClick={() => handleChange(0)}><BlackButton buttonText="Home" /></p>
             <p className="nav-item" onClick={() => handleChange(1)}><BlackButton buttonText="Picks" /></p>
