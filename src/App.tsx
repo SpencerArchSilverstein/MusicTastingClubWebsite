@@ -39,20 +39,15 @@ function App() {
   
   return (
     <React.Fragment>
-<div>{isMobile ? <MobileComponent handleChange={handleChange} /> : null}</div>
-
-      
-<div className="all" style={{ position: "relative" }}>
-<header className="header">
-  MUSIC TASTING CLUB
-</header> 
-
-
-<div className="image-scroller">
-<ImageScroller></ImageScroller>
-{/* <ImageScroller2></ImageScroller2> */}
-</div>
-<h5 className="header2">NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP</h5>
+      <div>{isMobile ? <MobileComponent handleChange={handleChange} /> : null}</div>
+        <div className="all" style={{ position: "relative" }}>
+          <header className="header">
+          MUSIC TASTING CLUB
+          </header> 
+        <div className="image-scroller">
+        <ImageScroller></ImageScroller>
+        </div>
+        <h5 className="header2">NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP</h5>
 
   {isMobile ? null : (
           <div className="nav-bar-cont">
